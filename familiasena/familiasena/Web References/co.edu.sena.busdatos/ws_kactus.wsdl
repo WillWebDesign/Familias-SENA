@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://10.104.180.11" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://10.104.180.11" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://10.104.180.11">
+      <s:element name="Consulta_Contacto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FechaInicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fechafin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodAc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consulta_ContactoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consulta_ContactoResult" type="tns:ArrayOfCRMInfoB" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCRMInfoB">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRMInfoB" nillable="true" type="tns:CRMInfoB" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRMInfoB">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TIP_DOCU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CEDULA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOMBRES" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APELLIDOS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GENERO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAI_RESI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NPAI_RESI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DTO_RESI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MPI_RESI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NMPI_RESI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EEE_MAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOEMPL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NTIPOEMPL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REGIONAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NREGIONAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CENTRO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NCENTRO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FECHAMOD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nro_Registros" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ControlR" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Consulta_Regional">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodAc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consulta_RegionalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consulta_RegionalResult" type="tns:ArrayOfCRMRegion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCRMRegion">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRMRegion" nillable="true" type="tns:CRMRegion" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRMRegion">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="REGIONAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NREGIONAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nro_Registros" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ControlR" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Consulta_Dependencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodAc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consulta_DependenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consulta_DependenciaResult" type="tns:ArrayOfCRMDependencia" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCRMDependencia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRMDependencia" nillable="true" type="tns:CRMDependencia" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRMDependencia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOMBRE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REGIONAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NREGIONAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nro_Registros" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ControlR" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Consulta_Pais">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodAc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consulta_PaisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consulta_PaisResult" type="tns:ArrayOfCRMPais" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCRMPais">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRMPais" nillable="true" type="tns:CRMPais" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRMPais">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="COD_PAIS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOM_PAIS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nro_Registros" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ControlR" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Consulta_Departamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodAc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consulta_DepartamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consulta_DepartamentoResult" type="tns:ArrayOfCRMDpto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCRMDpto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRMDpto" nillable="true" type="tns:CRMDpto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRMDpto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODPTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NCODPTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nro_Registros" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ControlR" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Consulta_Municipio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodAc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consulta_MunicipioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consulta_MunicipioResult" type="tns:ArrayOfCRMMunicipio" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCRMMunicipio">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRMMunicipio" nillable="true" type="tns:CRMMunicipio" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRMMunicipio">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="COD_MPIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOM_MPIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_DPTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOM_DPTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_PAIS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOM_PAIS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nro_Registros" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ControlR" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Consulta_Familia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Cedula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idfamiliar" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Correo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodAc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consulta_FamiliaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consulta_FamiliaResult" type="tns:ArrayOfConsFamilia" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfConsFamilia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConsFamilia" nillable="true" type="tns:ConsFamilia" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConsFamilia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="COD_EMPL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_FAMI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIP_RELA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EEE_MAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APELLIDOS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOMBRES" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APE_FAMI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOM_FAMI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RELACION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NACIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EDAD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEPENDE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DISCAP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REGIONAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CENTRO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ACTUALIZO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nro_Registros" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ControlR" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Actualiza_FSena">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="COD_EMPL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COD_FAMI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TIP_RELA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CONVOCATORIA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodAc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Actualiza_FSenaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Actualiza_FSenaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfCRMInfoB" nillable="true" type="tns:ArrayOfCRMInfoB" />
+      <s:element name="ArrayOfCRMRegion" nillable="true" type="tns:ArrayOfCRMRegion" />
+      <s:element name="ArrayOfCRMDependencia" nillable="true" type="tns:ArrayOfCRMDependencia" />
+      <s:element name="ArrayOfCRMPais" nillable="true" type="tns:ArrayOfCRMPais" />
+      <s:element name="ArrayOfCRMDpto" nillable="true" type="tns:ArrayOfCRMDpto" />
+      <s:element name="ArrayOfCRMMunicipio" nillable="true" type="tns:ArrayOfCRMMunicipio" />
+      <s:element name="ArrayOfConsFamilia" nillable="true" type="tns:ArrayOfConsFamilia" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Consulta_ContactoSoapIn">
+    <wsdl:part name="parameters" element="tns:Consulta_Contacto" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_ContactoSoapOut">
+    <wsdl:part name="parameters" element="tns:Consulta_ContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_RegionalSoapIn">
+    <wsdl:part name="parameters" element="tns:Consulta_Regional" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_RegionalSoapOut">
+    <wsdl:part name="parameters" element="tns:Consulta_RegionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_DependenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:Consulta_Dependencia" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_DependenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:Consulta_DependenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_PaisSoapIn">
+    <wsdl:part name="parameters" element="tns:Consulta_Pais" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_PaisSoapOut">
+    <wsdl:part name="parameters" element="tns:Consulta_PaisResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_DepartamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:Consulta_Departamento" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_DepartamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:Consulta_DepartamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_MunicipioSoapIn">
+    <wsdl:part name="parameters" element="tns:Consulta_Municipio" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_MunicipioSoapOut">
+    <wsdl:part name="parameters" element="tns:Consulta_MunicipioResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_FamiliaSoapIn">
+    <wsdl:part name="parameters" element="tns:Consulta_Familia" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_FamiliaSoapOut">
+    <wsdl:part name="parameters" element="tns:Consulta_FamiliaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Actualiza_FSenaSoapIn">
+    <wsdl:part name="parameters" element="tns:Actualiza_FSena" />
+  </wsdl:message>
+  <wsdl:message name="Actualiza_FSenaSoapOut">
+    <wsdl:part name="parameters" element="tns:Actualiza_FSenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_ContactoHttpGetIn">
+    <wsdl:part name="Operacion" type="s:string" />
+    <wsdl:part name="FechaInicio" type="s:string" />
+    <wsdl:part name="Fechafin" type="s:string" />
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_ContactoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCRMInfoB" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_RegionalHttpGetIn">
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_RegionalHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCRMRegion" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_DependenciaHttpGetIn">
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_DependenciaHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCRMDependencia" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_PaisHttpGetIn">
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_PaisHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCRMPais" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_DepartamentoHttpGetIn">
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_DepartamentoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCRMDpto" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_MunicipioHttpGetIn">
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_MunicipioHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCRMMunicipio" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_FamiliaHttpGetIn">
+    <wsdl:part name="Cedula" type="s:string" />
+    <wsdl:part name="idfamiliar" type="s:string" />
+    <wsdl:part name="Correo" type="s:string" />
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_FamiliaHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfConsFamilia" />
+  </wsdl:message>
+  <wsdl:message name="Actualiza_FSenaHttpGetIn">
+    <wsdl:part name="COD_EMPL" type="s:string" />
+    <wsdl:part name="COD_FAMI" type="s:string" />
+    <wsdl:part name="TIP_RELA" type="s:string" />
+    <wsdl:part name="CONVOCATORIA" type="s:string" />
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Actualiza_FSenaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_ContactoHttpPostIn">
+    <wsdl:part name="Operacion" type="s:string" />
+    <wsdl:part name="FechaInicio" type="s:string" />
+    <wsdl:part name="Fechafin" type="s:string" />
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_ContactoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCRMInfoB" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_RegionalHttpPostIn">
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_RegionalHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCRMRegion" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_DependenciaHttpPostIn">
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_DependenciaHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCRMDependencia" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_PaisHttpPostIn">
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_PaisHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCRMPais" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_DepartamentoHttpPostIn">
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_DepartamentoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCRMDpto" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_MunicipioHttpPostIn">
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_MunicipioHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCRMMunicipio" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_FamiliaHttpPostIn">
+    <wsdl:part name="Cedula" type="s:string" />
+    <wsdl:part name="idfamiliar" type="s:string" />
+    <wsdl:part name="Correo" type="s:string" />
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_FamiliaHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfConsFamilia" />
+  </wsdl:message>
+  <wsdl:message name="Actualiza_FSenaHttpPostIn">
+    <wsdl:part name="COD_EMPL" type="s:string" />
+    <wsdl:part name="COD_FAMI" type="s:string" />
+    <wsdl:part name="TIP_RELA" type="s:string" />
+    <wsdl:part name="CONVOCATORIA" type="s:string" />
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Actualiza_FSenaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="KactusSoap">
+    <wsdl:operation name="Consulta_Contacto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de los funcionarios de planta del SENA.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_ContactoSoapIn" />
+      <wsdl:output message="tns:Consulta_ContactoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Regional">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Regionales del SENA.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_RegionalSoapIn" />
+      <wsdl:output message="tns:Consulta_RegionalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Dependencia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Dependencias del SENA.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_DependenciaSoapIn" />
+      <wsdl:output message="tns:Consulta_DependenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Pais">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Paises.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_PaisSoapIn" />
+      <wsdl:output message="tns:Consulta_PaisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Departamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Departamentos.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_DepartamentoSoapIn" />
+      <wsdl:output message="tns:Consulta_DepartamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Municipio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Municipios.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_MunicipioSoapIn" />
+      <wsdl:output message="tns:Consulta_MunicipioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Familia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de familia.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_FamiliaSoapIn" />
+      <wsdl:output message="tns:Consulta_FamiliaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_FSena">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza datos familiasena</wsdl:documentation>
+      <wsdl:input message="tns:Actualiza_FSenaSoapIn" />
+      <wsdl:output message="tns:Actualiza_FSenaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="KactusHttpGet">
+    <wsdl:operation name="Consulta_Contacto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de los funcionarios de planta del SENA.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_ContactoHttpGetIn" />
+      <wsdl:output message="tns:Consulta_ContactoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Regional">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Regionales del SENA.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_RegionalHttpGetIn" />
+      <wsdl:output message="tns:Consulta_RegionalHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Dependencia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Dependencias del SENA.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_DependenciaHttpGetIn" />
+      <wsdl:output message="tns:Consulta_DependenciaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Pais">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Paises.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_PaisHttpGetIn" />
+      <wsdl:output message="tns:Consulta_PaisHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Departamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Departamentos.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_DepartamentoHttpGetIn" />
+      <wsdl:output message="tns:Consulta_DepartamentoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Municipio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Municipios.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_MunicipioHttpGetIn" />
+      <wsdl:output message="tns:Consulta_MunicipioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Familia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de familia.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_FamiliaHttpGetIn" />
+      <wsdl:output message="tns:Consulta_FamiliaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_FSena">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza datos familiasena</wsdl:documentation>
+      <wsdl:input message="tns:Actualiza_FSenaHttpGetIn" />
+      <wsdl:output message="tns:Actualiza_FSenaHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="KactusHttpPost">
+    <wsdl:operation name="Consulta_Contacto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de los funcionarios de planta del SENA.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_ContactoHttpPostIn" />
+      <wsdl:output message="tns:Consulta_ContactoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Regional">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Regionales del SENA.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_RegionalHttpPostIn" />
+      <wsdl:output message="tns:Consulta_RegionalHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Dependencia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Dependencias del SENA.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_DependenciaHttpPostIn" />
+      <wsdl:output message="tns:Consulta_DependenciaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Pais">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Paises.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_PaisHttpPostIn" />
+      <wsdl:output message="tns:Consulta_PaisHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Departamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Departamentos.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_DepartamentoHttpPostIn" />
+      <wsdl:output message="tns:Consulta_DepartamentoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Municipio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Municipios.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_MunicipioHttpPostIn" />
+      <wsdl:output message="tns:Consulta_MunicipioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Familia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de familia.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_FamiliaHttpPostIn" />
+      <wsdl:output message="tns:Consulta_FamiliaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_FSena">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza datos familiasena</wsdl:documentation>
+      <wsdl:input message="tns:Actualiza_FSenaHttpPostIn" />
+      <wsdl:output message="tns:Actualiza_FSenaHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="KactusSoap" type="tns:KactusSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Consulta_Contacto">
+      <soap:operation soapAction="http://10.104.180.11/Consulta_Contacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Regional">
+      <soap:operation soapAction="http://10.104.180.11/Consulta_Regional" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Dependencia">
+      <soap:operation soapAction="http://10.104.180.11/Consulta_Dependencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Pais">
+      <soap:operation soapAction="http://10.104.180.11/Consulta_Pais" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Departamento">
+      <soap:operation soapAction="http://10.104.180.11/Consulta_Departamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Municipio">
+      <soap:operation soapAction="http://10.104.180.11/Consulta_Municipio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Familia">
+      <soap:operation soapAction="http://10.104.180.11/Consulta_Familia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_FSena">
+      <soap:operation soapAction="http://10.104.180.11/Actualiza_FSena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="KactusSoap12" type="tns:KactusSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Consulta_Contacto">
+      <soap12:operation soapAction="http://10.104.180.11/Consulta_Contacto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Regional">
+      <soap12:operation soapAction="http://10.104.180.11/Consulta_Regional" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Dependencia">
+      <soap12:operation soapAction="http://10.104.180.11/Consulta_Dependencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Pais">
+      <soap12:operation soapAction="http://10.104.180.11/Consulta_Pais" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Departamento">
+      <soap12:operation soapAction="http://10.104.180.11/Consulta_Departamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Municipio">
+      <soap12:operation soapAction="http://10.104.180.11/Consulta_Municipio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Familia">
+      <soap12:operation soapAction="http://10.104.180.11/Consulta_Familia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_FSena">
+      <soap12:operation soapAction="http://10.104.180.11/Actualiza_FSena" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="KactusHttpGet" type="tns:KactusHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Consulta_Contacto">
+      <http:operation location="/Consulta_Contacto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Regional">
+      <http:operation location="/Consulta_Regional" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Dependencia">
+      <http:operation location="/Consulta_Dependencia" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Pais">
+      <http:operation location="/Consulta_Pais" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Departamento">
+      <http:operation location="/Consulta_Departamento" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Municipio">
+      <http:operation location="/Consulta_Municipio" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Familia">
+      <http:operation location="/Consulta_Familia" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_FSena">
+      <http:operation location="/Actualiza_FSena" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="KactusHttpPost" type="tns:KactusHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Consulta_Contacto">
+      <http:operation location="/Consulta_Contacto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Regional">
+      <http:operation location="/Consulta_Regional" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Dependencia">
+      <http:operation location="/Consulta_Dependencia" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Pais">
+      <http:operation location="/Consulta_Pais" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Departamento">
+      <http:operation location="/Consulta_Departamento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Municipio">
+      <http:operation location="/Consulta_Municipio" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Familia">
+      <http:operation location="/Consulta_Familia" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_FSena">
+      <http:operation location="/Actualiza_FSena" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Kactus">
+    <wsdl:port name="KactusSoap" binding="tns:KactusSoap">
+      <soap:address location="http://busdatos.sena.edu.co/ws/ws_kactus.asmx" />
+    </wsdl:port>
+    <wsdl:port name="KactusSoap12" binding="tns:KactusSoap12">
+      <soap12:address location="http://busdatos.sena.edu.co/ws/ws_kactus.asmx" />
+    </wsdl:port>
+    <wsdl:port name="KactusHttpGet" binding="tns:KactusHttpGet">
+      <http:address location="http://busdatos.sena.edu.co/ws/ws_kactus.asmx" />
+    </wsdl:port>
+    <wsdl:port name="KactusHttpPost" binding="tns:KactusHttpPost">
+      <http:address location="http://busdatos.sena.edu.co/ws/ws_kactus.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
