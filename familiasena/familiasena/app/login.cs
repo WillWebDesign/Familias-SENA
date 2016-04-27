@@ -8,9 +8,6 @@ using System.DirectoryServices;
 using System.Web.Services;
 using ws = familiasena.co.edu.sena.busdatos;
 
-
-
-
 public partial class login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -21,7 +18,7 @@ public partial class login : System.Web.UI.Page
   
     protected void enviar_Click(object sender, EventArgs e)
     {
-        string documento = txtdocumento.Text;
+        string identificacion = txtdocumento.Text;
         string path = @"LDAP://172.29.13.153:389";
         string dominio = @"sena.edu.co";
         string usuario = txtLogin.Text;
@@ -32,7 +29,7 @@ public partial class login : System.Web.UI.Page
         if (permiso)
         {
             lblError.Text = "bienvenido";
-           Response.Redirect("pagina.aspx");
+            Response.Redirect("pagina.aspx");
 
 
         }

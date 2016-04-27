@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pagina.aspx.cs" Inherits="pagina" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pagina.aspx.cs" Inherits="familiasena.app.pagina" %>
 
 <!DOCTYPE html>
 
@@ -9,12 +9,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        
-    <div>
-    <h1>hola</h1>
-        <asp:Button ID="Button1" runat="server" OnClick="cerrar_Click" Text="Cerrar Sesion" />
-        
-    </div>
+        <div>
+            <h1>hola</h1>
+        </div>
     </form>
 </body>
 </html>

@@ -14,7 +14,6 @@
         <div>
             <table>
                 <tr>
-
                     <td>
                         <asp:Label ID = "cedula" runat="server" Text="Cedula:"></asp:Label>
                     </td>
@@ -22,8 +21,7 @@
                         <asp:TextBox ID = "txtdocumento" Width="150" runat="server"></asp:TextBox>
                     </td>
                 </tr>
-                <tr>
-
+                 <tr>
                     <td>
                         <asp:Label ID = "lblName" runat="server" Text="Usuario:"></asp:Label>
                     </td>
