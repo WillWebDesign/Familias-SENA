@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,7 +18,7 @@ public partial class login : System.Web.UI.Page
   
     protected void enviar_Click(object sender, EventArgs e)
     {
-        string identificacion = txtdocumento.Text;
+        
         string path = @"LDAP://172.29.13.153:389";
         string dominio = @"sena.edu.co";
         string usuario = txtLogin.Text;

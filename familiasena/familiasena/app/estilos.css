@@ -42,14 +42,16 @@
 #login{
     background-color:#ffffff;
     text-align:center;
-    margin-top:4em;
-    margin-left:296px;
-    margin-right:0px;
-    width:45.4em;
+    margin-top:2em;
+    margin-bottom:2em;
+    margin-left:auto;
+    margin-right:auto;
+    width:40em;
     height:12.4em;
 
 }
 #pie {
+ 
     background-color: #F27323;
     width: auto;
     height: auto;

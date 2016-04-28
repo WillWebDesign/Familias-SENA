@@ -19,7 +19,7 @@
   
     <div id="cabeza">
         <div Id ="sena">
-            <img alt="" src="http://contratistas.sena.edu.co/Resources/logo_sena2.png" style="height: 109px; width: 124px" />
+            <img alt="" src="../imagen/logosena.png" style="height: 98px; width: 156px; margin-left: 0px;" />
         </div>
            
         <div class="familia"><h1 align="center" style="height: 45px; width: 410px; margin-left: auto; margin-right:auto">Familia Sena</h1></div>  
@@ -33,19 +33,21 @@
      <form id = "form1" runat="server">              
              
     <div id="login">
-        <label class="nombres">Cedula</label><br />
-        <asp:TextBox ID = "txtdocumento" Width="158px" runat="server" style="margin-left: 18px"></asp:TextBox><br />
-
-        <label class="nombres"> Usuario</label><br />
+  
+        <label> Usuario</label><br />
         <asp:TextBox ID = "txtLogin" Width="156px" runat="server" style="margin-left: 14px"></asp:TextBox><br />
 
-        <label class="nombres">Contraseña</label><br />
+        <label>Contraseña</label><br />
         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Width="157px" style="margin-left: 15px"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID = "Button1" runat="server" Text="Iniciar Sesion"  OnClick="enviar_Click" Width="173px" style="margin-left: 17px" /><br />
+        <asp:Button ID = "Button1" runat="server" Text="Iniciar Sesion"  OnClick="enviar_Click" Width="198px" style="margin-left: 10px" /><br />
         <asp:Label ID = "lblError" runat="server" ForeColor="Red" Text=""></asp:Label><br />
 
+        <br />
+        <br />
+
+        <br />
         <br />
         <br />
 
@@ -64,8 +66,8 @@
         <p class="a">Todos los derechos reservados © 2016 SENA – Políticas de privacidad y condiciones de uso</p>
             
             </div>
-        <div style="height: 236px">
-            <img alt="" src="http://contratistas.sena.edu.co/Resources/Certificaciones.png" />
+        <div id="imagen" style="height: 236px">
+            <img alt="" src="../imagen/certificaciones.png"" />
         </div>
     </div>
 </body>
