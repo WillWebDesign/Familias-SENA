@@ -165,6 +165,7 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="app\estilos.css" />
     <Content Include="app\login.aspx" />
     <Content Include="app\pagina.aspx" />
     <Content Include="Contact.aspx" />
@@ -374,6 +375,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
+    <Folder Include="imagen\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

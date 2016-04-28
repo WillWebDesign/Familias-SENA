@@ -21,15 +21,6 @@ public partial class login {
     protected global::System.Web.UI.HtmlControls.HtmlForm form1;
     
     /// <summary>
-    /// Control cedula.
-    /// </summary>
-    /// <remarks>
-    /// Campo generado automáticamente.
-    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.Label cedula;
-    
-    /// <summary>
     /// Control txtdocumento.
     /// </summary>
     /// <remarks>
@@ -37,15 +28,6 @@ public partial class login {
     /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox txtdocumento;
-    
-    /// <summary>
-    /// Control lblName.
-    /// </summary>
-    /// <remarks>
-    /// Campo generado automáticamente.
-    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.Label lblName;
     
     /// <summary>
     /// Control txtLogin.
@@ -57,15 +39,6 @@ public partial class login {
     protected global::System.Web.UI.WebControls.TextBox txtLogin;
     
     /// <summary>
-    /// Control lblpwd.
-    /// </summary>
-    /// <remarks>
-    /// Campo generado automáticamente.
-    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.Label lblpwd;
-    
-    /// <summary>
     /// Control txtPassword.
     /// </summary>
     /// <remarks>
@@ -75,13 +48,13 @@ public partial class login {
     protected global::System.Web.UI.WebControls.TextBox txtPassword;
     
     /// <summary>
-    /// Control btnLogin.
+    /// Control Button1.
     /// </summary>
     /// <remarks>
     /// Campo generado automáticamente.
     /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Button btnLogin;
+    protected global::System.Web.UI.WebControls.Button Button1;
     
     /// <summary>
     /// Control lblError.

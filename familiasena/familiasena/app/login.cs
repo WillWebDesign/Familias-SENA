@@ -10,7 +10,8 @@ using ws = familiasena.co.edu.sena.busdatos;
 
 public partial class login : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
+  
+     protected void Page_Load(object sender, EventArgs e)
     {
 
     }
@@ -38,8 +39,9 @@ public partial class login : System.Web.UI.Page
             lblError.Text = "acceso denegado";
         }
 
-        ws.ConsFamilia consulta = new ws.ConsFamilia();
+        ws.Kactus consulta = new ws.Kactus();
        
+  
     }
 
     private bool autenticacion(String path, String user, String pass)
