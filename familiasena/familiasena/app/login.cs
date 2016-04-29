@@ -6,6 +6,7 @@ using System.Data;
 using System.DirectoryServices;
 using System.Web.Services;
 using ws = familiasena.co.edu.sena.busdatos;
+using System.Text;
 
 public partial class login : System.Web.UI.Page
 {
@@ -28,9 +29,22 @@ public partial class login : System.Web.UI.Page
         bool permiso = autenticacion(path, domUsu, contrasena);
         if (permiso)
         {
-            lblError.Text = "bienvenido";
-            Response.Redirect("pagina.aspx");
+            string Cedula = "";
+            string idfamiliar = "";
+            string Correo = "jgalindos";
+            string CodAc = "5&5t3m4.k4kt0"; 
+            // lblError.Text = "bienvenido";
+            // Response.Redirect("pagina.aspx");
+            ws.Kactus Consulta = new ws.Kactus();
 
+            var resultado = Consulta.Consulta_Familia(Cedula, idfamiliar, Correo, CodAc);
+            //Response.Redirect("pagina.aspx");
+            foreach (var item in resultado)
+            {
+                // hacer algo con cada item
+                StringBuilder result = new StringBuilder();
+                lblError.Text = item.EDAD;
+            }
 
         }
         else
