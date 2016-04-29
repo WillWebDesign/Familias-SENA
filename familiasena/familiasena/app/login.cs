@@ -43,7 +43,24 @@ public partial class login : System.Web.UI.Page
             {
                 // hacer algo con cada item
                 StringBuilder result = new StringBuilder();
-                lblError.Text = item.EDAD;
+                lblError.Text = item.COD_EMPL + "\r";
+                lblError.Text += item.COD_FAMI+"\r";
+                lblError.Text += item.TIP_RELA + "\r";
+                lblError.Text += item.EEE_MAIL + "\r";
+                lblError.Text += item.APELLIDOS + "\r";
+                lblError.Text += item.NOMBRES + "\r";
+                lblError.Text += item.APE_FAMI + "\r";
+                lblError.Text += item.NOM_FAMI + "\r";
+                lblError.Text += item.RELACION + "\r";
+                lblError.Text += item.NACIO + "\r";
+                lblError.Text += item.EDAD + "\r";
+                lblError.Text += item.DEPENDE + "\r";
+                lblError.Text += item.DISCAP + "\r";
+                lblError.Text += item.REGIONAL + "\r";
+                lblError.Text += item.CENTRO + "\r";
+                lblError.Text += item.ACTUALIZO + "\r";
+                lblError.Text += item.Nro_Registros;
+
             }
 
         }
