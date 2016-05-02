@@ -13,7 +13,9 @@ public partial class login : System.Web.UI.Page
   
      protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["key"] != null) {
+            Response.Redirect("pagina.aspx");
+        }
     }
 
   
@@ -29,40 +31,8 @@ public partial class login : System.Web.UI.Page
         bool permiso = autenticacion(path, domUsu, contrasena);
         if (permiso)
         {
-            string Cedula = "";
-            string idfamiliar = "";
-            string Correo = "jgalindos";
-            string CodAc = "5&5t3m4.k4kt0"; 
-            // lblError.Text = "bienvenido";
-            // Response.Redirect("pagina.aspx");
-            ws.Kactus Consulta = new ws.Kactus();
-
-            var resultado = Consulta.Consulta_Familia(Cedula, idfamiliar, Correo, CodAc);
-            //Response.Redirect("pagina.aspx");
-            foreach (var item in resultado)
-            {
-                // hacer algo con cada item
-                StringBuilder result = new StringBuilder();
-                lblError.Text = item.COD_EMPL + "\r";
-                lblError.Text += item.COD_FAMI+"\r";
-                lblError.Text += item.TIP_RELA + "\r";
-                lblError.Text += item.EEE_MAIL + "\r";
-                lblError.Text += item.APELLIDOS + "\r";
-                lblError.Text += item.NOMBRES + "\r";
-                lblError.Text += item.APE_FAMI + "\r";
-                lblError.Text += item.NOM_FAMI + "\r";
-                lblError.Text += item.RELACION + "\r";
-                lblError.Text += item.NACIO + "\r";
-                lblError.Text += item.EDAD + "\r";
-                lblError.Text += item.DEPENDE + "\r";
-                lblError.Text += item.DISCAP + "\r";
-                lblError.Text += item.REGIONAL + "\r";
-                lblError.Text += item.CENTRO + "\r";
-                lblError.Text += item.ACTUALIZO + "\r";
-                lblError.Text += item.Nro_Registros;
-
-            }
-
+            Session["key"] = txtLogin.Text;
+            Response.Redirect("pagina.aspx");
         }
         else
         {
