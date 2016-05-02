@@ -22,22 +22,12 @@
 
 
     </div>            
+    <form id = "form2" runat="server">
 
-     <div id="contenido">
-        <div id="c1">Cedula</div>
-        <div id="c1">Apellidos</div>
-        <div id="c1">Nombres</div>
-        <div id="c1">Relacion</div>
-        <div id="c1">Edad</div>
-        <div id="c1">Fecha De Nacimiento</div>
-        <div id="c1">Deprendiente</div>
-        <div id="c1">Discapacitado</div>
-        <div id="c1">Regional</div>
-        <div id="c1">Centro</div>
-        <div id="c1">Seleccion</div>
-    
+        <asp:Label ID = "contenido" runat="server" ForeColor="Red" Text=""></asp:Label><br />
+    </form>
      
-      </div>
+
 
         
      

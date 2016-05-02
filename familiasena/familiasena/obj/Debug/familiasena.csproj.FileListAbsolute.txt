@@ -222,4 +222,3 @@ C:\Users\wburitica.SENA\Documents\GitHub\Familias-SENA\familiasena\familiasena\o
 \\Mac\Home\Familias-SENA\familiasena\familiasena\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 \\Mac\Home\Familias-SENA\familiasena\familiasena\obj\Debug\familiasena.dll
 \\Mac\Home\Familias-SENA\familiasena\familiasena\obj\Debug\familiasena.pdb
-\\Mac\Home\Familias-SENA\familiasena\familiasena\obj\Debug\familiasena.csprojResolveAssemblyReference.cache

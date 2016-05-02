@@ -9,8 +9,7 @@ using ws = familiasena.co.edu.sena.busdatos;
 using System.Text;
 
 public partial class login : System.Web.UI.Page
-{
-  
+{  
      protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["key"] != null) {
@@ -31,17 +30,37 @@ public partial class login : System.Web.UI.Page
         bool permiso = autenticacion(path, domUsu, contrasena);
         if (permiso)
         {
-            Session["key"] = txtLogin.Text;
-            Response.Redirect("pagina.aspx");
+            string Cedula = "";
+            string idfamiliar = "";
+            string Correo = "cjimenez";
+            string CodAc = "5&5t3m4.k4kt0";
+
+            ws.Kactus Consulta = new ws.Kactus();
+
+
+
+            ws.ConsFamilia[] resultado = Consulta.Consulta_Familia(Cedula, idfamiliar, Correo, CodAc);
+
+            lblError.Text = "";
+
+            foreach (var item in resultado)
+            {
+                // llamado de los valores
+                if (item.Nro_Registros != "0") {
+                    Session["key"] = txtLogin.Text;
+                    Response.Redirect("pagina.aspx");
+                }
+                else
+                {
+                    lblError.Text = "No Tiene Familiares Inscritos";
+                }
+            }
+            
         }
         else
         {
             lblError.Text = "acceso denegado";
         }
-
-        ws.Kactus consulta = new ws.Kactus();
-       
-  
     }
 
     private bool autenticacion(String path, String user, String pass)
