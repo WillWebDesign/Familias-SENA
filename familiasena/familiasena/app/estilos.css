@@ -1,75 +1,102 @@
-﻿body{
-    background-color:#d9dddc;
-}
-#contenedor{
-    border-style: solid;
-    border-color: inherit;
-    border-width: medium;
-    height: 7.4em;
-    width: 1187px;
-    margin-right:auto;
-    margin-left:auto;
+﻿body {
+    margin:0;
+    overflow:hidden;
 }
 
+
 #cabeza{
-    padding-top:1em;
-    padding-bottom:1em;
-    border-color: inherit;
-    border-width: medium;
-    height: 79px;
-    margin-left:auto;
+    
+    height: 7.2em;
+    width: 1161px;
     margin-right:auto;
-  
+    margin-left:auto;
+    margin-top:1em;
 }
 
 #sena{
     float:left;
-    padding-left:2em;
-    padding-right:2em;
-    width:150px;
-    height:96px;
-    
-    margin-top: 0px;
+    width:auto;
+    height:auto;
+    height: auto;
+    background-color:#ffffff;
+   
 }
 
-.h1{
-    font-family:Constantia;
-    padding-left:5em;
-    padding-right:5em;
-    width: 345px;
+
+#c1 {
+
+    background-color:#b6ff00;
+    display: table-cell;
+    border: 1px solid #000;
+    padding: 7px;
+  
+}
+
+
+.ima{
+   margin-left:1em;
+   margin-right:0.4em;
+    width: 974px;
+    height: 110px;
 }
 
 #login{
     background-color:#ffffff;
+    border-radius:1em;
     text-align:center;
     margin-top:2em;
     margin-bottom:2em;
     margin-left:auto;
     margin-right:auto;
-    width:40em;
+    width:35em;
     height:12.4em;
-
+   
 }
+#Button1 {
+    Width: 198px;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:2em;
+}
+
 #pie {
- 
-    background-color: #F27323;
-    width: auto;
-    height: auto;
+   
+    position: absolute;
+	bottom: 0px;
+	width: 100%;
+	background-color:#F27323;
+	overflow: hidden;
+
+
+    
 }       
 #parrafo{ 
-    font-family:Arial;
+    border:double;
     float:left;
-    margin-left:6.4em; 
-    width: 650px;
-    height: 164px;
-    padding-top:2em;
-    margin-right: 0px;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em;
+    width:37em;
+    height: 158px;
+   
+    padding-top:1em;
+    padding-bottom:2em;
+    padding-left:1em;
+    padding-right:1em;
+}
+#imagen{
+
+    border:double;
+    float:left;
+    width:37em;
+    height: 158px;
+    
+    padding-top:1em;
+    padding-bottom:2em;
+    padding-left:1em;
+    padding-right:1em;
 }
 
-.a {
+.a{
+  font-family:Constantia;
   color:#ffffff;
   font-size:13px;
+  text-align:left;
 }

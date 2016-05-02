@@ -10,60 +10,38 @@
     
 </head>
 <body>
-    <form id="form1" runat="server">
     <div id="contenedor">
+   
+    <div id="cabeza">
+        <div Id ="sena">
+            <img class="ima" alt="" src="../imagen/logosena.png" style="height: 111px; width: 135px;" />
+        </div>
 
-       
-        <table Id="almacenar" border="1">
-
-            <tr>
-                <td>
-                    <h4>Cedula</h4>
-                </td>
-
-                <td width="100">
-                    <h4>Nombres</h4>
-                </td>
-
-                <td width="100">
-                   <h4>Apellidos</h4> 
-                </td>
-
-                <td width="100">
-                    <h4>Parentesco</h4>
-                </td>
-
-                <td width="100">
-                    <h4>Estado</h4>
-                </td>
-
-                <td width="100">
-                    <h4>Fecha De Nacimiento</h4>
-                </td>
-
-                <td width="100">
-                    <h4>Edad</h4>
-                </td>
-
-                <td width="100">
-                    <h4>Dependiente</h4>
-                </td>
-
-                <td width="100">
-                    <h4>Discapacitado</h4>
-                </td>
-
-                <td width="100">
-                    <h4>Regional</h4>
-                </td>
-
-                <td class="auto-style1">
-                    <h4>Confirmacion</h4>
-                </td>
-            </tr>
-            </table>
-
+         <h1 align="center" style="width: 1008px">Familia Sena</h1>
     </div>
-    </form>
-</body>
+
+
+    </div>            
+
+     <div id="contenido">
+        <div id="c1">Cedula</div>
+        <div id="c1">Apellidos</div>
+        <div id="c1">Nombres</div>
+        <div id="c1">Relacion</div>
+        <div id="c1">Edad</div>
+        <div id="c1">Fecha De Nacimiento</div>
+        <div id="c1">Deprendiente</div>
+        <div id="c1">Discapacitado</div>
+        <div id="c1">Regional</div>
+        <div id="c1">Centro</div>
+        <div id="c1">Seleccion</div>
+    
+     
+      </div>
+
+        
+     
+    
+
+    </body>
 </html>
