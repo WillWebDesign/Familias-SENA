@@ -17,7 +17,7 @@
     <form id="form1" runat="server">
     
 <div id="contenedor">
-    <asp:Button ID="cerrar" runat="server"   Text="Cerrar  Sesion"/>
+    <asp:Button ID="cerrar" runat="server" OnClick="Logout"  Text="Cerrar  Sesion"/>
    <div id="cabeza">
         <div Id ="sena">
             <img alt="" src="../imagen/logosena.png" style="height: 107px; width: 146px; margin-left:2em; margin-top:4px;" />
@@ -34,28 +34,12 @@
        <div id="nombre"  style="margin-left:4em; width: 370px; margin-top: 30px;">Nombres:</div>
        <div id ="cedula"  style="margin-left:4em; width: 370px;">Cedula:</div>
   </div>
-     <div id="familiares">
-         <div style="width: 444px; margin-left: auto; margin-right:auto; padding-top:8px; text-align:center; font-size:2em;">Familiar</div>
-       <div  style="float:right; width: 268px; height: 179px; margin-top: 23px;"><img alt="" src="../imagen/usuario.png" style="height: 173px; width: 204px; margin-right:2em;" /></div>
-       <div  style="margin-left:4em; width: 370px; padding-top:2em;">Cedula:</div>
-       <div  style="margin-left:4em; width: 370px;">Apellidos:</div>
-       <div  style="margin-left:4em; width: 370px;">Nombres:</div>
-       <div  style="margin-left:4em; width: 370px;">Relacion:</div>
-       <div  style="margin-left:4em; width: 370px;">Edad:</div>
-       <div  style="margin-left:4em; width: 370px;">Fecha De Nacimiento:</div>
-       <div  style="margin-left:4em; width: 370px;">Reginal:</div>
-       <div  style="margin-left:4em; width: 370px;">Centro:</div><br /><br />
-      
-       <div style="width: 539px; margin-left:auto; margin-right:auto;">boton</div>
-
-        <div ID = "contenido" runat="server">
-
-           
- 
-
-        </div> <br/>
+     <div id="familiares" runat="server">
+         
+        
+     </div> <br/>
     
-   </div>
+   
 </div>  
 
          <div id="pie">

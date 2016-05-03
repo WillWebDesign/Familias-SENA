@@ -168,6 +168,7 @@
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="app\estilos.css" />
     <Content Include="app\login.aspx" />
+    <Content Include="app\main.js" />
     <Content Include="app\pagina.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -310,9 +311,7 @@
     <Compile Include="app\pagina.aspx.designer.cs">
       <DependentUpon>pagina.aspx</DependentUpon>
     </Compile>
-    <Compile Include="app\pagina.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    <Compile Include="app\pagina.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>

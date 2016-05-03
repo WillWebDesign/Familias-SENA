@@ -20,9 +20,10 @@ public partial class pagina : System.Web.UI.Page
         }
 
 
-        public void Logout() {
+        public void Logout(object sender, EventArgs e) {
                 Session.Abandon();
                 Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
+                Response.Redirect("login.aspx");
             }
     //control de cantidad de familiares
 
@@ -41,31 +42,25 @@ public partial class pagina : System.Web.UI.Page
 
         ws.ConsFamilia[] resultado = Consulta.Consulta_Familia(Cedula, idfamiliar, Correo, CodAc);
 
-        contenido.InnerHtml = "";
+        familiares.InnerHtml = "";
         int i = 0;
         foreach (var item in resultado)
         {
             // llamado de los valores
             i++;
-            contenido.InnerHtml += "<h6>" + item.COD_EMPL + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.COD_FAMI + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.TIP_RELA + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.EEE_MAIL + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.APELLIDOS + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.NOMBRES + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.APE_FAMI + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.NOM_FAMI + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.RELACION + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.NACIO + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.EDAD + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.DEPENDE + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.DISCAP + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.REGIONAL + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.CENTRO + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.ACTUALIZO + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.Nro_Registros + "</h6>";
-            contenido.InnerHtml += "<div class='onoffswitch' OnClick='check_Click' Value='"+item.COD_FAMI+"'><input type = 'checkbox' name = 'onoffswitch' class='onoffswitch-checkbox' id='myonoffswitch" + i+ "'><label class='onoffswitch-label' for='myonoffswitch" + i + "'><span class='onoffswitch-inner'></span><span class='onoffswitch-switch'></span></label></div>";
-
+            familiares.InnerHtml += "<div id='familiar' > ";
+            familiares.InnerHtml += "<div style='width: 444px; margin-left: auto; margin-right:auto; padding-top:8px; text-align:center; font-size:2em;'>Familiar</div>";
+            //familiares.InnerHtml += "<div  style='float:right; width: 268px; height: 179px; margin-top: 23px;'><img alt=' src='../imagen/usuario.png' style='height: 173px; width: 204px; margin-right:2em;' /></div>";
+            familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px; padding-top:2em;'>Cedula:" + item.COD_EMPL + "</div>";
+            familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Apellidos:" + item.APE_FAMI + "</div>";
+            familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Nombres:" + item.NOM_FAMI + "</div>";
+            familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Relacion:" + item.TIP_RELA + "</div>";
+            familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Edad:" + item.EDAD + "</div>";
+            familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Fecha De Nacimiento:" + item.NACIO + "</div>";
+            familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Reginal:" + item.REGIONAL + "</div>";
+            familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Centro:" + item.CENTRO + "</div><br /><br />";          
+            familiares.InnerHtml += "<div style='margin:0 auto;' class='onoffswitch' OnClick='check_Click' Value='"+item.COD_FAMI+"'><input type = 'checkbox' name = 'onoffswitch' class='onoffswitch-checkbox' id='myonoffswitch" + i+ "'><label class='onoffswitch-label' for='myonoffswitch" + i + "'><span class='onoffswitch-inner'></span><span class='onoffswitch-switch'></span></label></div>";
+            familiares.InnerHtml += "</div> ";
         }
 
 
