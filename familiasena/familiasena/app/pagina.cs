@@ -5,7 +5,7 @@ using System.Web;
 using ws = familiasena.co.edu.sena.busdatos;
 
 
-public partial class paginas : System.Web.UI.Page
+public partial class pagina : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,16 +18,16 @@ public partial class paginas : System.Web.UI.Page
                 infoFamiliaWS(Correo);
             }
         }
-    public void Logout()
-    {
-        Session.Abandon();
-        Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
-    }
+        public void Logout()
+            {
+                Session.Abandon();
+                Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
+            }
     protected void infoFamiliaWS(string e) {
 
         string Cedula = "";
         string idfamiliar = "";
-        string Correo = e;
+        string Correo = "jgalindos";
         string CodAc = "5&5t3m4.k4kt0";
 
         ws.Kactus Consulta = new ws.Kactus();
@@ -36,29 +36,29 @@ public partial class paginas : System.Web.UI.Page
 
         ws.ConsFamilia[] resultado = Consulta.Consulta_Familia(Cedula, idfamiliar, Correo, CodAc);
 
-        //lblError.Text = "";
+        contenido.InnerHtml = "";
 
         foreach (var item in resultado)
         {
             // llamado de los valores
 
-            //lblError.Text += item.COD_EMPL + "\n";
-            //lblError.Text += item.COD_FAMI + "\r";
-            //lblError.Text += item.TIP_RELA + "\r";
-            //lblError.Text += item.EEE_MAIL + "\r";
-            //lblError.Text += item.APELLIDOS + "\r";
-            //lblError.Text += item.NOMBRES + "\r";
-            //lblError.Text += item.APE_FAMI + "\r";
-            //lblError.Text += item.NOM_FAMI + "\r";
-            //lblError.Text += item.RELACION + "\r";
-            //lblError.Text += item.NACIO + "\r";
-            //lblError.Text += item.EDAD + "\r";
-            //lblError.Text += item.DEPENDE + "\r";
-            //lblError.Text += item.DISCAP + "\r";
-            //lblError.Text += item.REGIONAL + "\r";
-            //lblError.Text += item.CENTRO + "\r";
-            //lblError.Text += item.ACTUALIZO + "\r";
-            //lblError.Text += item.Nro_Registros;
+            contenido.InnerHtml += "<h6>" + item.COD_EMPL + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.COD_FAMI + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.TIP_RELA + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.EEE_MAIL + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.APELLIDOS + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.NOMBRES + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.APE_FAMI + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.NOM_FAMI + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.RELACION + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.NACIO + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.EDAD + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.DEPENDE + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.DISCAP + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.REGIONAL + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.CENTRO + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.ACTUALIZO + "</h6>";
+            contenido.InnerHtml += "<h6>" + item.Nro_Registros + "</h6>";
 
         }
 

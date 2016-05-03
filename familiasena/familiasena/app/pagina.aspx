@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pagina.aspx.cs" Inherits="familiasena.app.pagina" %>
+﻿
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pagina.aspx.cs" Inherits="pagina" %>
 
 <!DOCTYPE html>
 
@@ -25,7 +26,9 @@
      <div id="familiares">
     <form id = "form2" runat="server">
 
-        <asp:Label ID = "contenido" runat="server" ForeColor="Red" Text=""></asp:Label><br />
+        <div ID = "contenido" runat="server">
+
+        </div> <br/>
     </form>
          </div>
 </div>  
