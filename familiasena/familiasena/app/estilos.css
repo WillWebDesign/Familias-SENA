@@ -1,16 +1,14 @@
 ﻿body {
     margin:0;
     overflow:hidden;
+    background-color:#efebeb;
 }
 
-
 #cabeza{
-    
-    height: 7.2em;
-    width: 1161px;
-    margin-right:auto;
-    margin-left:auto;
-    margin-top:1em;
+    background-color:#ffffff;
+    height: 7em;
+    border: 1px solid #ffffff; 
+ 
 }
 
 #sena{
@@ -18,22 +16,10 @@
     width:auto;
     height:auto;
     height: auto;
-    background-color:#ffffff;
    
 }
-
-
-#c1 {
-
-    background-color:#b6ff00;
-    display: table-cell;
-    border: 1px solid #000;
-    padding: 7px;
-  
-}
-
-
 .ima{
+    margin-top:1em;
    margin-left:1em;
    margin-right:0.4em;
     width: 974px;
@@ -48,9 +34,35 @@
     margin-bottom:2em;
     margin-left:auto;
     margin-right:auto;
+    padding-top:2em;
     width:35em;
     height:12.4em;
    
+}
+
+#contenidos{
+    background-color:#ffffff;
+    width:60em;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1em;
+    margin-bottom:1em;
+    height:30em;
+}
+#funcionario{
+    background-color:#ffd800;
+    width:55em;
+    margin-left:auto;
+    margin-right:auto;
+    height:8em;
+}
+#familiares{
+    background-color:#ffd800;
+    width:55em;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1em;
+    height:15em;
 }
 #Button1 {
     Width: 198px;
@@ -60,39 +72,9 @@
 }
 
 #pie {
-   
-    position: absolute;
-	bottom: 0px;
-	width: 100%;
-	background-color:#F27323;
-	overflow: hidden;
-
-
     
+	background-color:#F27323;    
 }       
-#parrafo{ 
-    border:double;
-    float:left;
-    width:37em;
-    height: 158px;
-   
-    padding-top:1em;
-    padding-bottom:2em;
-    padding-left:1em;
-    padding-right:1em;
-}
-#imagen{
-
-    border:double;
-    float:left;
-    width:37em;
-    height: 158px;
-    
-    padding-top:1em;
-    padding-bottom:2em;
-    padding-left:1em;
-    padding-right:1em;
-}
 
 .a{
   font-family:Constantia;
