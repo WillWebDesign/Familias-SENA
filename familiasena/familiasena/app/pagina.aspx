@@ -9,37 +9,59 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     
+  
+    
 </head>
 <body>
-    <div id="contenedor">
-   
-    <div id="cabeza">
+    
+    <form id="form1" runat="server">
+    
+<div id="contenedor">
+    <asp:Button ID="cerrar" runat="server"   Text="Cerrar  Sesion"/>
+   <div id="cabeza">
         <div Id ="sena">
             <img alt="" src="../imagen/logosena.png" style="height: 107px; width: 146px; margin-left:2em; margin-top:4px;" />
         </div>
-           
         <div class="familia"><h1 align="center" style="height: 45px; width: 410px; margin-left: auto; margin-right:auto; margin-top:1em;">Familia Sena</h1></div>  
         </div>   
- <div id="contenidos">     
-     <div id="funcionario">
-     </div>
+ 
+ <div id="contenidos"> 
+         
+  <div id="funcionario">
+      
+        <div style="float:right; margin-bottom:2px; margin-top:2px; height: 120px; width: 258px;"><img alt="" src="../imagen/familia.png" style="height: 124px; width: 228px; margin-right:2em; " /></div>
+        
+       <div id="nombre"  style="margin-left:4em; width: 370px; margin-top: 30px;">Nombres:</div>
+       <div id ="cedula"  style="margin-left:4em; width: 370px;">Cedula:</div>
+  </div>
      <div id="familiares">
-    <form id = "form2" runat="server">
+         <div style="width: 444px; margin-left: auto; margin-right:auto; padding-top:8px; text-align:center; font-size:2em;">Familiar</div>
+       <div  style="float:right; width: 268px; height: 179px; margin-top: 23px;"><img alt="" src="../imagen/usuario.png" style="height: 173px; width: 204px; margin-right:2em;" /></div>
+       <div  style="margin-left:4em; width: 370px; padding-top:2em;">Cedula:</div>
+       <div  style="margin-left:4em; width: 370px;">Apellidos:</div>
+       <div  style="margin-left:4em; width: 370px;">Nombres:</div>
+       <div  style="margin-left:4em; width: 370px;">Relacion:</div>
+       <div  style="margin-left:4em; width: 370px;">Edad:</div>
+       <div  style="margin-left:4em; width: 370px;">Fecha De Nacimiento:</div>
+       <div  style="margin-left:4em; width: 370px;">Reginal:</div>
+       <div  style="margin-left:4em; width: 370px;">Centro:</div><br /><br />
+      
+       <div style="width: 539px; margin-left:auto; margin-right:auto;">boton</div>
 
         <div ID = "contenido" runat="server">
 
+           
+ 
+
         </div> <br/>
-    </form>
-         </div>
+    
+   </div>
 </div>  
 
          <div id="pie">
-     
-
-
-              <table style="height: 238px; width: 846px; margin-left:auto; margin-right:auto; font-family:Constantia;color:#ffffff; font-size:12px;">
-<tr>
-  <td class="auto-style2"><strong>Servicio Nacional de Aprendizaje SENA – Dirección General
+     <table style="height: 238px; width: 846px; margin-left:auto; margin-right:auto; font-family:Constantia;color:#ffffff; font-size:12px;">
+       <tr>
+        <td class="auto-style2"><strong>Servicio Nacional de Aprendizaje SENA – Dirección General
            Calle 57 No. 8 - 69 Bogotá D.C., Cundinamarca, Colombia
            Atención presencial: lunes a viernes 8:00 a.m. a 5:30 p.m. - Resto del país sedes y horarios<br /><br />
            Atención telefónica: lunes a viernes 7:00 a.m. a 7:00 p.m. - sábados 8:00 a.m. a 1:00 p.m.
@@ -47,19 +69,15 @@
            Líneas gratuitas atención al empresario: Bogotá (57 1) 4049494 – Resto del país 018000 910682
            Conmutador Nacional (57 1) 5461500 – Extensiones
            Correo notificaciones judiciales: notificacionesjudiciales@sena.edu.co<br /><br />
-       Todos los derechos reservados © 2016 SENA – Políticas de privacidad y condiciones de uso</strong></td>
+          Todos los derechos reservados © 2016 SENA – Políticas de privacidad y condiciones de uso</strong></td>
   
-     <td ><img alt="" src="../imagen/Certificaciones.png" style="height: 109px; width: 353px; margin-bottom:8em;" /></td>
-
-</tr>
-
-            </table>
-        
-               
-    </div>      
-        
+        <td ><img alt="" src="../imagen/Certificaciones.png" style="height: 109px; width: 353px; margin-bottom:8em;" /></td>
+       </tr>
+      </table>
+        </div>          
      
     
         </div>
+    </form>
     </body>
 </html>

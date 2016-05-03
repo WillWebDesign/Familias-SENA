@@ -36,32 +36,34 @@ public partial class pagina : System.Web.UI.Page
 
         ws.ConsFamilia[] resultado = Consulta.Consulta_Familia(Cedula, idfamiliar, Correo, CodAc);
 
-        contenido.InnerHtml = "";
+        //contenido.InnerHtml = "";
 
         foreach (var item in resultado)
         {
             // llamado de los valores
 
-            contenido.InnerHtml += "<h6>" + item.COD_EMPL + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.COD_FAMI + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.TIP_RELA + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.EEE_MAIL + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.APELLIDOS + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.NOMBRES + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.APE_FAMI + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.NOM_FAMI + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.RELACION + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.NACIO + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.EDAD + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.DEPENDE + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.DISCAP + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.REGIONAL + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.CENTRO + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.ACTUALIZO + "</h6>";
-            contenido.InnerHtml += "<h6>" + item.Nro_Registros + "</h6>";
+            // contenido.InnerHtml += "<h6>" + item.COD_EMPL + "</h6>";
+            //contenido.InnerHtml += "<h6>" + item.COD_FAMI + "</h6>";
+            //contenido.InnerHtml += "<h6>" + item.TIP_RELA + "</h6>";
+            // contenido.InnerHtml += "<h6>" + item.EEE_MAIL + "</h6>";
+            // contenido.InnerHtml += "<h6>" + item.APELLIDOS + "</h6>";
+            // contenido.InnerHtml += "<h6>" + item.NOMBRES + "</h6>";
+            // contenido.InnerHtml += "<h6>" + item.APE_FAMI + "</h6>";
+            // contenido.InnerHtml += "<h6>" + item.NOM_FAMI + "</h6>";
+            // contenido.InnerHtml += "<h6>" + item.RELACION + "</h6>";
+            // contenido.InnerHtml += "<h6>" + item.NACIO + "</h6>";
+            // contenido.InnerHtml += "<h6>" + item.EDAD + "</h6>";
+            //contenido.InnerHtml += "<h6>" + item.DEPENDE + "</h6>";
+            // contenido.InnerHtml += "<h6>" + item.DISCAP + "</h6>";
+            //contenido.InnerHtml += "<h6>" + item.REGIONAL + "</h6>";
+            //contenido.InnerHtml += "<h6>" + item.CENTRO + "</h6>";
+            //contenido.InnerHtml += "<h6>" + item.ACTUALIZO + "</h6>";
+            //contenido.InnerHtml += "<h6>" + item.Nro_Registros + "</h6>";
 
         }
 
 
     }
+    
+    
 }
