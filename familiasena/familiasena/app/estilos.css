@@ -1,6 +1,6 @@
 ﻿body {
    margin:0;
-   background-color:#efebeb;
+ 
 }
 #contenedor {
     background: white;
@@ -11,19 +11,22 @@
     height: 7em;
     border: 1px solid #ffffff;
     margin-top: 5px;
+    width:80em;
+    margin-right:auto;
+    margin-left:auto;
 }
 
 #sena{
     float:left;
-    width:auto;
+    width:186px;
     height:auto;
-    height: auto;
+    height: 108px;
    
 }
 .ima{
     margin-top:1em;
-   margin-left:1em;
-   margin-right:0.4em;
+    margin-left:1em;
+    margin-right:0.4em;
     width: 974px;
     height: 110px;
 }
@@ -32,13 +35,13 @@
     background-color:#ffffff;
     border-radius:1em;
     text-align:center;
-    margin-top:2em;
-    margin-bottom:2em;
+    margin-top:1em;
+    margin-bottom:1em;
     margin-left:auto;
     margin-right:auto;
     padding-top:2em;
     width:35em;
-    height:12.4em;
+    height:auto;
    
 }
 
@@ -84,17 +87,42 @@
     padding-bottom: 1em;
 }
 #Button1 {
-    Width: 198px;
-    margin-left:1065px;
-    margin-right:auto;
-    border-radius:2em;
+  background: #6dd1de;
+  background-image: -webkit-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -moz-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -ms-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -o-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: linear-gradient(to bottom, #6dd1de, #94a3a2);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 1px 1px 3px #c7a9c7;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+
+
 }
 
 #cerrar{
     float:right;
-    border-radius:2em;
-    Width: 198px;
-}
+ background: #6dd1de;
+  background-image: -webkit-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -moz-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -ms-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -o-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: linear-gradient(to bottom, #6dd1de, #94a3a2);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 1px 1px 3px #c7a9c7;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;}
 #pie {
     
 	background-color:#F27323;    
