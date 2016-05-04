@@ -48,10 +48,12 @@ public partial class pagina : System.Web.UI.Page
         {
             // llamado de los valores
             i++;
+            nombre.InnerText = "Nombres:" + item.NOMBRES +" "+item.APELLIDOS;
+            cedula.InnerText = "Cedula:" + item.COD_EMPL;
             familiares.InnerHtml += "<div id='familiar' > ";
             familiares.InnerHtml += "<div style='width: 444px; margin-left: auto; margin-right:auto; padding-top:8px; text-align:center; font-size:2em;'>Familiar</div>";
             //familiares.InnerHtml += "<div  style='float:right; width: 268px; height: 179px; margin-top: 23px;'><img alt=' src='../imagen/usuario.png' style='height: 173px; width: 204px; margin-right:2em;' /></div>";
-            familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px; padding-top:2em;'>Cedula:" + item.COD_EMPL + "</div>";
+            familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px; padding-top:2em;'>Cedula:" + item.COD_FAMI + "</div>";
             familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Apellidos:" + item.APE_FAMI + "</div>";
             familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Nombres:" + item.NOM_FAMI + "</div>";
             familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Relacion:" + item.TIP_RELA + "</div>";
@@ -59,7 +61,7 @@ public partial class pagina : System.Web.UI.Page
             familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Fecha De Nacimiento:" + item.NACIO + "</div>";
             familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Reginal:" + item.REGIONAL + "</div>";
             familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Centro:" + item.CENTRO + "</div><br /><br />";          
-            familiares.InnerHtml += "<div style='margin:0 auto;' class='onoffswitch' OnClick='check_Click' Value='"+item.COD_FAMI+"'><input type = 'checkbox' name = 'onoffswitch' class='onoffswitch-checkbox' id='myonoffswitch" + i+ "'><label class='onoffswitch-label' for='myonoffswitch" + i + "'><span class='onoffswitch-inner'></span><span class='onoffswitch-switch'></span></label></div>";
+            familiares.InnerHtml += "<div  style='margin:0 auto;' class='onoffswitch' value='"+i+ "'><input type='hidden' id='rela"+ i +"' value='" + item.TIP_RELA + "'><input type = 'checkbox' value='" + i + "' name = 'onoffswitch' class='onoffswitch-checkbox' id='myonoffswitch" + i+ "'><label class='onoffswitch-label' value='" + i + "' for='myonoffswitch" + i + "'><span class='onoffswitch-inner'></span><span class='onoffswitch-switch'></span></label></div>";
             familiares.InnerHtml += "</div> ";
         }
 

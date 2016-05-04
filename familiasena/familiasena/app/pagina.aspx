@@ -7,6 +7,8 @@
 <head runat="server">
 <link href="estilos.css" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script src="jquery.min.js"></script>
+<script src="main.js"></script>
     <title></title>
     
   
@@ -31,8 +33,8 @@
       
         <div style="float:right; margin-bottom:2px; margin-top:2px; height: 120px; width: 258px;"><img alt="" src="../imagen/familia.png" style="height: 124px; width: 228px; margin-right:2em; " /></div>
         
-       <div id="nombre"  style="margin-left:4em; width: 370px; margin-top: 30px;">Nombres:</div>
-       <div id ="cedula"  style="margin-left:4em; width: 370px;">Cedula:</div>
+       <div id="nombre" runat="server" style="margin-left:4em; width: 370px; margin-top: 30px;">Nombres:</div>
+       <div id ="cedula" runat="server" style="margin-left:4em; width: 370px;">Cedula:</div>
   </div>
      <div id="familiares" runat="server">
          

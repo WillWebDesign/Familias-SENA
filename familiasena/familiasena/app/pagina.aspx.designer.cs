@@ -30,6 +30,24 @@ public partial class pagina {
     protected global::System.Web.UI.WebControls.Button cerrar;
     
     /// <summary>
+    /// nombre control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlGenericControl nombre;
+    
+    /// <summary>
+    /// cedula control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlGenericControl cedula;
+    
+    /// <summary>
     /// familiares control.
     /// </summary>
     /// <remarks>
