@@ -37,8 +37,6 @@ public partial class login : System.Web.UI.Page
 
             ws.Kactus Consulta = new ws.Kactus();
 
-
-
             ws.ConsFamilia[] resultado = Consulta.Consulta_Familia(Cedula, idfamiliar, Correo, CodAc);
 
             lblError.Text = "";

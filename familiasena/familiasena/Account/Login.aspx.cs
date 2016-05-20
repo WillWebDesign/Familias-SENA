@@ -6,7 +6,9 @@ using System;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using ws = familiasena.co.edu.sena.busdatos;
 using familiasena.Models;
+using System.DirectoryServices;
 
 namespace familiasena.Account
 {
@@ -14,32 +16,73 @@ namespace familiasena.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            RegisterHyperLink.NavigateUrl = "Register";
-            OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
-            var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-            if (!String.IsNullOrEmpty(returnUrl))
+            if (Session["key"] != null)
             {
-                RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
+                Response.Redirect("pagina.aspx");
             }
         }
 
-        protected void LogIn(object sender, EventArgs e)
+        protected void enviar_Click(object sender, EventArgs e)
         {
-            if (IsValid)
+
+            string path = @"LDAP://172.29.13.153:389";
+            string dominio = @"sena.edu.co";
+            string usuario = txtLogin.Text;
+            string contrasena = txtPassword.Text;
+            string domUsu = dominio + @"\" + usuario;
+
+            bool permiso = autenticacion(path, domUsu, contrasena);
+            if (permiso)
             {
-                // Validar la contraseña del usuario
-                var manager = new UserManager();
-                ApplicationUser user = manager.Find(UserName.Text, Password.Text);
-                if (user != null)
+                string Cedula = "";
+                string idfamiliar = "";
+                string Correo = "jgalindos";
+                string CodAc = "5&5t3m4.k4kt0";
+
+                ws.Kactus Consulta = new ws.Kactus();
+
+
+
+                ws.ConsFamilia[] resultado = Consulta.Consulta_Familia(Cedula, idfamiliar, Correo, CodAc);
+
+                lblError.Text = "";
+
+                foreach (var item in resultado)
                 {
-                    IdentityHelper.SignIn(manager, user, RememberMe.Checked);
-                    IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                    // llamado de los valores
+                    if (item.Nro_Registros != "0")
+                    {
+                        Session["key"] = txtLogin.Text;
+                        Response.Redirect("../app/pagina.aspx");
+                    }
+                    else
+                    {
+                        lblError.Text = "No Tiene Familiares Inscritos";
+                    }
                 }
-                else
-                {
-                    FailureText.Text = "Invalid username or password.";
-                    ErrorMessage.Visible = true;
-                }
+
+            }
+            else
+            {
+                lblError.Text = "acceso denegado";
+            }
+        }
+
+        private bool autenticacion(String path, String user, String pass)
+        {
+
+            DirectoryEntry de = new DirectoryEntry(path, user, pass);
+            try
+            {
+
+                DirectorySearcher ds = new DirectorySearcher(de);
+                ds.FindOne();
+                return true;
+            }
+            catch
+            {
+
+                return false;
             }
         }
     }

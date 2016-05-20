@@ -9,6 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <script src="jquery.min.js"></script>
 <script src="main.js"></script>
+
     <title></title>
     
   
@@ -41,7 +42,7 @@
         
      </div> <br/>
     
-   
+   <input type="button" id="enviarInfo" value="Confirmar"/>
 </div>  
 
          <div id="pie">

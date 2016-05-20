@@ -39,48 +39,62 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Nombre de la aplicación</a>
+                <div id="cabeza">
+                    <div Id ="sena">
+                        <img alt="" src="../imagen/logosena.png" style="height: 107px; width: 146px; margin-left:2em; margin-top:4px;" />
+                    </div>
+           
+                <div class="familia" style="float:left; width: 875px; height: 88px;" ><h1 align="center" style="height: 41px; width: 496px; margin-left: auto; margin-right:auto; margin-top:1em;">Familia Sena</h1></div>  
+
+                <div id="enlaces" style="float:right;  height: 101px; width: 201px; margin-right:5px; margin-left: 0px;">
+             
+               <table style="height: 40px; float:right; width: 140px;">
+                    <tr>
+                        <td> <img alt="" src="../imagen/logo.png" style="height: 63px; width: 175px; float:; margin-top: 0px;" /></td>
+                    </tr>  
+              </table>
+
+              <table style="height: 7px; float:right; width: 140px;  margin-bottom:3em;">
+             
+                   <tr>
+                     <td> <a href="https://www.facebook.com/senageneral/"><img  alt="" src="../imagen/facebook.png" style="height: 26px; width: 26px" /></a></td>
+                     <td><a href="https://www.youtube.com/user/SENATV"><img alt="" src="../imagen/youtube.png" style="height: 26px; width: 26px" /></a></td>
+                     <td><a href="https://www.instagram.com/senacomunica/"><img alt="" src="../imagen/instagran.png" style="height: 26px; width: 26px" /></a></td>
+                     <td><a href="https://plus.google.com/+senacolombia/posts"><img alt="" src="../imagen/google.png" style="height: 26px; width: 26px" /></a></td>
+                     <td><a href="https://twitter.com/SENAComunica"><img alt="" src="../imagen/twitter.png" style="height: 26px; width: 26px" /></a></td>
+                   </tr>
+               </table>
                 </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Inicio</a></li>
-                        <li><a runat="server" href="~/About">Acerca de</a></li>
-                        <li><a runat="server" href="~/Contact">Contacto</a></li>
-                    </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Registrarse</a></li>
-                                <li><a runat="server" href="~/Account/Login">Iniciar sesión</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesión" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
-                </div>
+               </div>   
             </div>
-        </div>
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
-            </footer>
+        <div id="pie">
+            <table style="height: 238px; width: 846px; margin-left:auto; margin-right:auto; font-family:Constantia;color:#ffffff; font-size:12px;">
+                <tr>
+                   <td >Servicio Nacional de Aprendizaje SENA – Dirección General
+                   Calle 57 No. 8 - 69 Bogotá D.C., Cundinamarca, Colombia
+                   Atención presencial: lunes a viernes 8:00 a.m. a 5:30 p.m. - Resto del país sedes y horarios<br /><br />
+                   Atención telefónica: lunes a viernes 7:00 a.m. a 7:00 p.m. - sábados 8:00 a.m. a 1:00 p.m.
+                   Líneas gratuitas atención al ciudadano: Bogotá (57 1) 5925555 – Resto del país 018000 910270
+                   Líneas gratuitas atención al empresario: Bogotá (57 1) 4049494 – Resto del país 018000 910682
+                   Conmutador Nacional (57 1) 5461500 – Extensiones
+                   Correo notificaciones judiciales: notificacionesjudiciales@sena.edu.co<br /><br />
+                   Todos los derechos reservados © 2016 SENA – Políticas de privacidad y condiciones de uso</td>
+           
+                    <td ><img alt="" src="../imagen/Certificaciones.png" style="height: 109px; width: 353px; margin-bottom:8em;" /></td>
+                </tr>
+
+            </table>
+        
+               
+    
+        </div>     
         </div>
     </form>
 </body>

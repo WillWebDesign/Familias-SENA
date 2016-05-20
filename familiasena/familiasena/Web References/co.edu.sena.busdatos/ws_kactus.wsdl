@@ -252,6 +252,40 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="Consulta_FamiliaInsc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="COD_EMPL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ANUAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CONVOCATORIA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodAc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consulta_FamiliaInscResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consulta_FamiliaInscResult" type="tns:ArrayOfConsFins" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfConsFins">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConsFins" nillable="true" type="tns:ConsFins" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConsFins">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="COD_EMPL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_FAMI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIP_RELA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONVOCATORIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FECHA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ANUAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nro_Registros" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ControlR" type="s:string" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="ArrayOfCRMInfoB" nillable="true" type="tns:ArrayOfCRMInfoB" />
       <s:element name="ArrayOfCRMRegion" nillable="true" type="tns:ArrayOfCRMRegion" />
       <s:element name="ArrayOfCRMDependencia" nillable="true" type="tns:ArrayOfCRMDependencia" />
@@ -260,6 +294,7 @@
       <s:element name="ArrayOfCRMMunicipio" nillable="true" type="tns:ArrayOfCRMMunicipio" />
       <s:element name="ArrayOfConsFamilia" nillable="true" type="tns:ArrayOfConsFamilia" />
       <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ArrayOfConsFins" nillable="true" type="tns:ArrayOfConsFins" />
     </s:schema>
   </wsdl:types>
   <wsdl:message name="Consulta_ContactoSoapIn">
@@ -309,6 +344,12 @@
   </wsdl:message>
   <wsdl:message name="Actualiza_FSenaSoapOut">
     <wsdl:part name="parameters" element="tns:Actualiza_FSenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_FamiliaInscSoapIn">
+    <wsdl:part name="parameters" element="tns:Consulta_FamiliaInsc" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_FamiliaInscSoapOut">
+    <wsdl:part name="parameters" element="tns:Consulta_FamiliaInscResponse" />
   </wsdl:message>
   <wsdl:message name="Consulta_ContactoHttpGetIn">
     <wsdl:part name="Operacion" type="s:string" />
@@ -368,6 +409,15 @@
   <wsdl:message name="Actualiza_FSenaHttpGetOut">
     <wsdl:part name="Body" element="tns:string" />
   </wsdl:message>
+  <wsdl:message name="Consulta_FamiliaInscHttpGetIn">
+    <wsdl:part name="COD_EMPL" type="s:string" />
+    <wsdl:part name="ANUAL" type="s:string" />
+    <wsdl:part name="CONVOCATORIA" type="s:string" />
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_FamiliaInscHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfConsFins" />
+  </wsdl:message>
   <wsdl:message name="Consulta_ContactoHttpPostIn">
     <wsdl:part name="Operacion" type="s:string" />
     <wsdl:part name="FechaInicio" type="s:string" />
@@ -426,6 +476,15 @@
   <wsdl:message name="Actualiza_FSenaHttpPostOut">
     <wsdl:part name="Body" element="tns:string" />
   </wsdl:message>
+  <wsdl:message name="Consulta_FamiliaInscHttpPostIn">
+    <wsdl:part name="COD_EMPL" type="s:string" />
+    <wsdl:part name="ANUAL" type="s:string" />
+    <wsdl:part name="CONVOCATORIA" type="s:string" />
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_FamiliaInscHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfConsFins" />
+  </wsdl:message>
   <wsdl:portType name="KactusSoap">
     <wsdl:operation name="Consulta_Contacto">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de los funcionarios de planta del SENA.</wsdl:documentation>
@@ -466,6 +525,11 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza datos familiasena</wsdl:documentation>
       <wsdl:input message="tns:Actualiza_FSenaSoapIn" />
       <wsdl:output message="tns:Actualiza_FSenaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_FamiliaInsc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Inscritos a familia.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_FamiliaInscSoapIn" />
+      <wsdl:output message="tns:Consulta_FamiliaInscSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="KactusHttpGet">
@@ -509,6 +573,11 @@
       <wsdl:input message="tns:Actualiza_FSenaHttpGetIn" />
       <wsdl:output message="tns:Actualiza_FSenaHttpGetOut" />
     </wsdl:operation>
+    <wsdl:operation name="Consulta_FamiliaInsc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Inscritos a familia.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_FamiliaInscHttpGetIn" />
+      <wsdl:output message="tns:Consulta_FamiliaInscHttpGetOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="KactusHttpPost">
     <wsdl:operation name="Consulta_Contacto">
@@ -550,6 +619,11 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza datos familiasena</wsdl:documentation>
       <wsdl:input message="tns:Actualiza_FSenaHttpPostIn" />
       <wsdl:output message="tns:Actualiza_FSenaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_FamiliaInsc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Inscritos a familia.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_FamiliaInscHttpPostIn" />
+      <wsdl:output message="tns:Consulta_FamiliaInscHttpPostOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="KactusSoap" type="tns:KactusSoap">
@@ -619,6 +693,15 @@
     </wsdl:operation>
     <wsdl:operation name="Actualiza_FSena">
       <soap:operation soapAction="http://10.104.180.11/Actualiza_FSena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_FamiliaInsc">
+      <soap:operation soapAction="http://10.104.180.11/Consulta_FamiliaInsc" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -701,6 +784,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Consulta_FamiliaInsc">
+      <soap12:operation soapAction="http://10.104.180.11/Consulta_FamiliaInsc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="KactusHttpGet" type="tns:KactusHttpGet">
     <http:binding verb="GET" />
@@ -776,6 +868,15 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Consulta_FamiliaInsc">
+      <http:operation location="/Consulta_FamiliaInsc" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="KactusHttpPost" type="tns:KactusHttpPost">
     <http:binding verb="POST" />
@@ -844,6 +945,15 @@
     </wsdl:operation>
     <wsdl:operation name="Actualiza_FSena">
       <http:operation location="/Actualiza_FSena" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_FamiliaInsc">
+      <http:operation location="/Consulta_FamiliaInsc" />
       <wsdl:input>
         <mime:content type="application/x-www-form-urlencoded" />
       </wsdl:input>

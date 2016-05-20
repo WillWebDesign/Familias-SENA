@@ -45,6 +45,8 @@ namespace familiasena.co.edu.sena.busdatos {
         
         private System.Threading.SendOrPostCallback Actualiza_FSenaOperationCompleted;
         
+        private System.Threading.SendOrPostCallback Consulta_FamiliaInscOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -106,6 +108,9 @@ namespace familiasena.co.edu.sena.busdatos {
         
         /// <remarks/>
         public event Actualiza_FSenaCompletedEventHandler Actualiza_FSenaCompleted;
+        
+        /// <remarks/>
+        public event Consulta_FamiliaInscCompletedEventHandler Consulta_FamiliaInscCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://10.104.180.11/Consulta_Contacto", RequestNamespace="http://10.104.180.11", ResponseNamespace="http://10.104.180.11", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -356,6 +361,41 @@ namespace familiasena.co.edu.sena.busdatos {
             if ((this.Actualiza_FSenaCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.Actualiza_FSenaCompleted(this, new Actualiza_FSenaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://10.104.180.11/Consulta_FamiliaInsc", RequestNamespace="http://10.104.180.11", ResponseNamespace="http://10.104.180.11", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ConsFins[] Consulta_FamiliaInsc(string COD_EMPL, string ANUAL, string CONVOCATORIA, string CodAc) {
+            object[] results = this.Invoke("Consulta_FamiliaInsc", new object[] {
+                        COD_EMPL,
+                        ANUAL,
+                        CONVOCATORIA,
+                        CodAc});
+            return ((ConsFins[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Consulta_FamiliaInscAsync(string COD_EMPL, string ANUAL, string CONVOCATORIA, string CodAc) {
+            this.Consulta_FamiliaInscAsync(COD_EMPL, ANUAL, CONVOCATORIA, CodAc, null);
+        }
+        
+        /// <remarks/>
+        public void Consulta_FamiliaInscAsync(string COD_EMPL, string ANUAL, string CONVOCATORIA, string CodAc, object userState) {
+            if ((this.Consulta_FamiliaInscOperationCompleted == null)) {
+                this.Consulta_FamiliaInscOperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsulta_FamiliaInscOperationCompleted);
+            }
+            this.InvokeAsync("Consulta_FamiliaInsc", new object[] {
+                        COD_EMPL,
+                        ANUAL,
+                        CONVOCATORIA,
+                        CodAc}, this.Consulta_FamiliaInscOperationCompleted, userState);
+        }
+        
+        private void OnConsulta_FamiliaInscOperationCompleted(object arg) {
+            if ((this.Consulta_FamiliaInscCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Consulta_FamiliaInscCompleted(this, new Consulta_FamiliaInscCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -615,6 +655,111 @@ namespace familiasena.co.edu.sena.busdatos {
             }
             set {
                 this.eSTADOField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Nro_Registros {
+            get {
+                return this.nro_RegistrosField;
+            }
+            set {
+                this.nro_RegistrosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ControlR {
+            get {
+                return this.controlRField;
+            }
+            set {
+                this.controlRField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://10.104.180.11")]
+    public partial class ConsFins {
+        
+        private string cOD_EMPLField;
+        
+        private string cOD_FAMIField;
+        
+        private string tIP_RELAField;
+        
+        private string cONVOCATORIAField;
+        
+        private string fECHAField;
+        
+        private string aNUALField;
+        
+        private string nro_RegistrosField;
+        
+        private string controlRField;
+        
+        /// <remarks/>
+        public string COD_EMPL {
+            get {
+                return this.cOD_EMPLField;
+            }
+            set {
+                this.cOD_EMPLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string COD_FAMI {
+            get {
+                return this.cOD_FAMIField;
+            }
+            set {
+                this.cOD_FAMIField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string TIP_RELA {
+            get {
+                return this.tIP_RELAField;
+            }
+            set {
+                this.tIP_RELAField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string CONVOCATORIA {
+            get {
+                return this.cONVOCATORIAField;
+            }
+            set {
+                this.cONVOCATORIAField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string FECHA {
+            get {
+                return this.fECHAField;
+            }
+            set {
+                this.fECHAField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ANUAL {
+            get {
+                return this.aNUALField;
+            }
+            set {
+                this.aNUALField = value;
             }
         }
         
@@ -1425,6 +1570,32 @@ namespace familiasena.co.edu.sena.busdatos {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void Consulta_FamiliaInscCompletedEventHandler(object sender, Consulta_FamiliaInscCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Consulta_FamiliaInscCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Consulta_FamiliaInscCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ConsFins[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ConsFins[])(this.results[0]));
             }
         }
     }

@@ -1,0 +1,201 @@
+﻿body {
+   margin:0;
+ 
+}
+#contenedor {
+    background: white;
+}
+
+#cabeza{
+    background-color:#ffffff;
+    height: 7em;
+    border: 1px solid #ffffff;
+    margin-top: 5px;
+    width:80em;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+#sena{
+    float:left;
+    width:186px;
+    height:auto;
+    height: 108px;
+   
+}
+.ima{
+    margin-top:1em;
+    margin-left:1em;
+    margin-right:0.4em;
+    width: 974px;
+    height: 110px;
+}
+
+#login{
+    background-color:#ffffff;
+    border-radius:1em;
+    text-align:center;
+    margin-top:1em;
+    margin-bottom:1em;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:2em;
+    width:35em;
+    height:auto;
+   
+}
+
+#contenidos{
+    margin-right:auto;
+    margin-left:auto;
+    background-color:#ffffff;
+    width:60.2em;
+    height:auto;
+    margin-top:1em;
+    margin-bottom:1em;
+}
+
+#funcionario {
+
+    border-radius: 10px;
+    background-color: #efebeb;
+    padding-top: 1em;
+    width:48.2em;
+    margin-left:auto;
+    margin-right:auto;
+    height:9.4em;
+   
+   
+}
+
+#familiares{
+    border-radius:10px;
+    width:48.6em;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1em;
+    height:auto;
+}
+#familiar{
+    border-radius:10px;
+    background-color:#efebeb;
+    width:48.6em;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1em;
+    height:auto;
+    padding-bottom: 1em;
+}
+#Button1 {
+  background: #6dd1de;
+  background-image: -webkit-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -moz-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -ms-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -o-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: linear-gradient(to bottom, #6dd1de, #94a3a2);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 1px 1px 3px #c7a9c7;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+
+
+}
+
+#cerrar{
+    float:right;
+ background: #6dd1de;
+  background-image: -webkit-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -moz-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -ms-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -o-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: linear-gradient(to bottom, #6dd1de, #94a3a2);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 1px 1px 3px #c7a9c7;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;}
+#pie {
+    
+	background-color:#F27323;    
+}       
+
+.a{
+  font-family:Constantia;
+  color:#ffffff;
+  font-size:13px;
+  text-align:left;
+}
+
+.onoffswitch {
+    position: relative; 
+    width: 90px;
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; 
+    overflow: hidden; 
+    cursor: pointer;
+    border: 2px solid #999999; 
+    border-radius: 0px;
+}
+.onoffswitch-inner {
+    display: block; 
+    width: 200%; 
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; 
+    float: left; 
+    width: 50%; 
+    height: 30px; 
+    padding: 0; 
+    line-height: 26px;
+    font-size: 14px; 
+    color: white; 
+    font-family: Trebuchet, Arial, sans-serif; 
+    font-weight: bold;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+.onoffswitch-inner:before {
+    content: "";
+    padding-left: 10px;
+    background-color: #7FDB8B; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "";
+    padding-right: 10px;
+    background-color: #E33030; color: #333333;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; 
+    width: 25px; 
+    margin: 0px;
+    background: #B0A9A9;
+    position: absolute; top: 0; bottom: 0;
+    right: 65px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
