@@ -20,9 +20,10 @@ namespace familiasena.app
         public static string pruebaAjax(string cedulaFam, string cedulaFun , string tipoRela)
         {
             string año = "2016";
-            string convocatoria = "2";
+            string convocatoria = "5";
             string codAc = "5&5t3m4.k4kt0";
             string resultadoNum = "";
+            string numDocFam = "";
             string rstl = "";
             //return string.Format("me llego {0} {1}", cedulaFam, cedulaFun);
             ws.Kactus Query = new ws.Kactus();
@@ -32,7 +33,7 @@ namespace familiasena.app
                 foreach (var item in resultado){
 
                     resultadoNum =item.Nro_Registros;
-                    
+                    numDocFam = item.COD_FAMI;
                 }
                     
                 int valorUni = Int32.Parse(resultadoNum.Substring(0,1));
@@ -42,12 +43,15 @@ namespace familiasena.app
                         }
                      else {
                             if (valorUni < 2) {
-                                //ws.Kactus ingreso = new ws.Kactus();
+                                if (cedulaFam != numDocFam)
+                                {
+                                    ws.Kactus ingreso = new ws.Kactus();
 
-                                //var responde = ingreso.Actualiza_FSena(cedulaFun, cedulaFam, tipoRela, convocatoria, codAc);
+                                    var responde = ingreso.Actualiza_FSena(cedulaFun, cedulaFam, tipoRela, convocatoria, codAc);
 
-                                //rstl = responde;
-                                rstl = string.Format("puede");
+                                    rstl = responde;
+                                    //rstl = string.Format("puede"+cedulaFam);
+                                }
                             }
                         }
                 

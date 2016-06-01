@@ -37,7 +37,7 @@ public partial class pagina : System.Web.UI.Page
 
         string Cedula = "";
         string idfamiliar = "";
-        string Correo = "jgalindos";
+        string Correo = e;
         string CodAc = "5&5t3m4.k4kt0";
 
         ws.Kactus Consulta = new ws.Kactus();
