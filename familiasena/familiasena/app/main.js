@@ -20,7 +20,7 @@
                                     console.log(response);
                                     //alert(response)
                                     if (response.d >= 1) {
-                                        alert("Se a completado exitosamente el registro.");
+                                        alert("Se a completado exitosamente el registro de el familiar identificado con el siguiente Nº: " + valCedulaFam);
                                     }
                                     else {
                                         alert("Cupos de registro para convocatoria llenos");
