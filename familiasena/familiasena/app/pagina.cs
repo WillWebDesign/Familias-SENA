@@ -37,7 +37,7 @@ public partial class pagina : System.Web.UI.Page
 
         string Cedula = "";
         string idfamiliar = "";
-        string Correo = e;
+        string Correo = "jgalindos";
         string CodAc = "5&5t3m4.k4kt0";
 
         ws.Kactus Consulta = new ws.Kactus();
@@ -56,7 +56,6 @@ public partial class pagina : System.Web.UI.Page
             cedula.InnerText = "Cedula:" + item.COD_EMPL;
             familiares.InnerHtml += "<div id='familiar' > ";
             familiares.InnerHtml += "<div style='width: 444px; margin-left: auto; margin-right:auto; padding-top:8px; text-align:center; font-size:2em;'>Familiar</div>";
-            //familiares.InnerHtml += "<div  style='float:right; width: 268px; height: 179px; margin-top: 23px;'><img alt=' src='../imagen/usuario.png' style='height: 173px; width: 204px; margin-right:2em;' /></div>";
             familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px; padding-top:2em;'>Cedula:" + item.COD_FAMI + "</div>";
             familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Apellidos:" + item.APE_FAMI + "</div>";
             familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Nombres:" + item.NOM_FAMI + "</div>";
@@ -64,10 +63,12 @@ public partial class pagina : System.Web.UI.Page
             familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Edad:" + item.EDAD + "</div>";
             familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Fecha De Nacimiento:" + item.NACIO + "</div>";
             familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Reginal:" + item.REGIONAL + "</div>";
-            familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Centro:" + item.CENTRO + "</div><br /><br />";          
+            familiares.InnerHtml += "<div  style='margin-left:4em; width: 370px;'>Centro:" + item.CENTRO + "</div><br /><br /><br />";
+            familiares.InnerHtml += "<div   class='seleccionar'>Seleccionar Familliar" + "</div><br />"; 
             familiares.InnerHtml += "<div  style='margin:0 auto;' class='onoffswitch' value='"+i+ "'><input type='hidden' id='rela" + i +"' value='" + item.TIP_RELA + "'><input type='hidden' id='docFun" + i + "' value='" + item.COD_EMPL + "'><input type='hidden' id='docFam" + i + "' value='" + item.COD_FAMI + "'><input type = 'checkbox' value='" + i + "' name = 'onoffswitch' class='onoffswitch-checkbox' id='myonoffswitch" + i+ "'><label class='onoffswitch-label' value='" + i + "' for='myonoffswitch" + i + "'><span class='onoffswitch-inner'></span><span class='onoffswitch-switch'></span></label></div>";
+           
             familiares.InnerHtml += "</div> ";
-        }
+        } 
         familiares.InnerHtml += "<input type='hidden' id='count' value='" + i + "' >";
 
     }
