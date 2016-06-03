@@ -1,7 +1,8 @@
-﻿body {
+﻿body {    
+   
    margin:0;
- 
 }
+ 
 #contenedor {
     background: white;
 }
@@ -34,16 +35,16 @@
 }
 
 #login{
-    background-color:#ffffff;
+    background-color:#efebeb;
     border-radius:1em;
     text-align:center;
-    margin-top:1em;
-    margin-bottom:1em;
+    margin-top:3em;
+    margin-bottom:3em;
     margin-left:auto;
     margin-right:auto;
     padding-top:2em;
-    width:35em;
-    height:auto;
+    width:50em;
+    height:15em;
    
 }
 
@@ -108,6 +109,23 @@
 
 }
 
+#enviarInfo{
+    background: #6dd1de;
+  background-image: -webkit-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -moz-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -ms-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: -o-linear-gradient(top, #6dd1de, #94a3a2);
+  background-image: linear-gradient(to bottom, #6dd1de, #94a3a2);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+   text-shadow: 1px 1px 3px #c7a9c7;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px 10px 5px 10px;
+}
+
 #cerrar{
     float:right;
  background: #6dd1de;
@@ -126,8 +144,11 @@
   padding: 5px 10px 5px 10px;
   text-decoration: none;}
 #pie {
-    
-	background-color:#F27323;    
+
+	background-color:#F27323;  
+ 
+
+
 }       
 
 .a{

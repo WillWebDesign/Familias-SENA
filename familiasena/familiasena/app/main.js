@@ -62,6 +62,7 @@
                 if (contador > 2) {
                     //alert("control");
                     $("#myonoffswitch" + v).removeAttr("checked");
+                    alert("No se puede seleccionar mas de 2 familiares.");
                     contador--;
                 }
             }

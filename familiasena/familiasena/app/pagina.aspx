@@ -23,7 +23,7 @@
     <asp:Button ID="cerrar" runat="server" OnClick="Logout"  Text="Cerrar  Sesion"/>
    <div id="cabeza">
         <div Id ="sena">
-            <img alt="" src="../imagen/logosena.png" style="height: 107px; width: 146px; margin-left:2em; margin-top:4px;" />
+            <img alt="" src="../imagen/logosena.png" style="height: 82px; width: 102px; margin-left:2em; margin-top:17px;" />
         </div>
         <div class="familia"><h1 align="center" style="height: 45px; width: 410px; margin-left: auto; margin-right:auto; margin-top:1em;">Familia Sena</h1></div>  
         </div>   
