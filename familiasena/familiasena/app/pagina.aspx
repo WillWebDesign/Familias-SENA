@@ -36,6 +36,7 @@
         
        <div id="nombre" runat="server" style="margin-left:4em; width: 370px; margin-top: 30px;">Nombres:</div>
        <div id ="cedula" runat="server" style="margin-left:4em; width: 370px;">Cedula:</div>
+       <div id ="convocatoria" runat="server" style="margin-left:4em; width: 370px;"></div>
   </div>
      <div id="familiares" runat="server">
          

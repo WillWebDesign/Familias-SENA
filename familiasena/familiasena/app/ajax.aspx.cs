@@ -17,10 +17,10 @@ namespace familiasena.app
         }
 
         [System.Web.Services.WebMethod]
-        public static string pruebaAjax(string cedulaFam, string cedulaFun , string tipoRela)
+        public static string pruebaAjax(string cedulaFam, string cedulaFun , string tipoRela, string convocat)
         {
             string año = "2016";
-            string convocatoria = "5";
+            string convocatoria = convocat;
             string codAc = "5&5t3m4.k4kt0";
             string resultadoNum = "";
             string numDocFam = "";

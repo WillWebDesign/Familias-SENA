@@ -47,6 +47,8 @@ namespace familiasena.co.edu.sena.busdatos {
         
         private System.Threading.SendOrPostCallback Consulta_FamiliaInscOperationCompleted;
         
+        private System.Threading.SendOrPostCallback Consulta_ConvocatoriaOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -111,6 +113,9 @@ namespace familiasena.co.edu.sena.busdatos {
         
         /// <remarks/>
         public event Consulta_FamiliaInscCompletedEventHandler Consulta_FamiliaInscCompleted;
+        
+        /// <remarks/>
+        public event Consulta_ConvocatoriaCompletedEventHandler Consulta_ConvocatoriaCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://10.104.180.11/Consulta_Contacto", RequestNamespace="http://10.104.180.11", ResponseNamespace="http://10.104.180.11", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -400,6 +405,35 @@ namespace familiasena.co.edu.sena.busdatos {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://10.104.180.11/Consulta_Convocatoria", RequestNamespace="http://10.104.180.11", ResponseNamespace="http://10.104.180.11", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ConsConv[] Consulta_Convocatoria(string CodAc) {
+            object[] results = this.Invoke("Consulta_Convocatoria", new object[] {
+                        CodAc});
+            return ((ConsConv[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Consulta_ConvocatoriaAsync(string CodAc) {
+            this.Consulta_ConvocatoriaAsync(CodAc, null);
+        }
+        
+        /// <remarks/>
+        public void Consulta_ConvocatoriaAsync(string CodAc, object userState) {
+            if ((this.Consulta_ConvocatoriaOperationCompleted == null)) {
+                this.Consulta_ConvocatoriaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsulta_ConvocatoriaOperationCompleted);
+            }
+            this.InvokeAsync("Consulta_Convocatoria", new object[] {
+                        CodAc}, this.Consulta_ConvocatoriaOperationCompleted, userState);
+        }
+        
+        private void OnConsulta_ConvocatoriaOperationCompleted(object arg) {
+            if ((this.Consulta_ConvocatoriaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Consulta_ConvocatoriaCompleted(this, new Consulta_ConvocatoriaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -655,6 +689,99 @@ namespace familiasena.co.edu.sena.busdatos {
             }
             set {
                 this.eSTADOField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Nro_Registros {
+            get {
+                return this.nro_RegistrosField;
+            }
+            set {
+                this.nro_RegistrosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ControlR {
+            get {
+                return this.controlRField;
+            }
+            set {
+                this.controlRField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://10.104.180.11")]
+    public partial class ConsConv {
+        
+        private string idField;
+        
+        private string fINIField;
+        
+        private string fFINField;
+        
+        private string nOTAField;
+        
+        private string nOTA1Field;
+        
+        private string nro_RegistrosField;
+        
+        private string controlRField;
+        
+        /// <remarks/>
+        public string ID {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string FINI {
+            get {
+                return this.fINIField;
+            }
+            set {
+                this.fINIField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string FFIN {
+            get {
+                return this.fFINField;
+            }
+            set {
+                this.fFINField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string NOTA {
+            get {
+                return this.nOTAField;
+            }
+            set {
+                this.nOTAField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string NOTA1 {
+            get {
+                return this.nOTA1Field;
+            }
+            set {
+                this.nOTA1Field = value;
             }
         }
         
@@ -1596,6 +1723,32 @@ namespace familiasena.co.edu.sena.busdatos {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((ConsFins[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void Consulta_ConvocatoriaCompletedEventHandler(object sender, Consulta_ConvocatoriaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Consulta_ConvocatoriaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Consulta_ConvocatoriaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ConsConv[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ConsConv[])(this.results[0]));
             }
         }
     }

@@ -286,6 +286,36 @@
           <s:element minOccurs="0" maxOccurs="1" name="ControlR" type="s:string" />
         </s:sequence>
       </s:complexType>
+      <s:element name="Consulta_Convocatoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodAc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consulta_ConvocatoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consulta_ConvocatoriaResult" type="tns:ArrayOfConsConv" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfConsConv">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConsConv" nillable="true" type="tns:ConsConv" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConsConv">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FINI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FFIN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOTA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOTA1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nro_Registros" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ControlR" type="s:string" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="ArrayOfCRMInfoB" nillable="true" type="tns:ArrayOfCRMInfoB" />
       <s:element name="ArrayOfCRMRegion" nillable="true" type="tns:ArrayOfCRMRegion" />
       <s:element name="ArrayOfCRMDependencia" nillable="true" type="tns:ArrayOfCRMDependencia" />
@@ -295,6 +325,7 @@
       <s:element name="ArrayOfConsFamilia" nillable="true" type="tns:ArrayOfConsFamilia" />
       <s:element name="string" nillable="true" type="s:string" />
       <s:element name="ArrayOfConsFins" nillable="true" type="tns:ArrayOfConsFins" />
+      <s:element name="ArrayOfConsConv" nillable="true" type="tns:ArrayOfConsConv" />
     </s:schema>
   </wsdl:types>
   <wsdl:message name="Consulta_ContactoSoapIn">
@@ -350,6 +381,12 @@
   </wsdl:message>
   <wsdl:message name="Consulta_FamiliaInscSoapOut">
     <wsdl:part name="parameters" element="tns:Consulta_FamiliaInscResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_ConvocatoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:Consulta_Convocatoria" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_ConvocatoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:Consulta_ConvocatoriaResponse" />
   </wsdl:message>
   <wsdl:message name="Consulta_ContactoHttpGetIn">
     <wsdl:part name="Operacion" type="s:string" />
@@ -418,6 +455,12 @@
   <wsdl:message name="Consulta_FamiliaInscHttpGetOut">
     <wsdl:part name="Body" element="tns:ArrayOfConsFins" />
   </wsdl:message>
+  <wsdl:message name="Consulta_ConvocatoriaHttpGetIn">
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_ConvocatoriaHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfConsConv" />
+  </wsdl:message>
   <wsdl:message name="Consulta_ContactoHttpPostIn">
     <wsdl:part name="Operacion" type="s:string" />
     <wsdl:part name="FechaInicio" type="s:string" />
@@ -485,6 +528,12 @@
   <wsdl:message name="Consulta_FamiliaInscHttpPostOut">
     <wsdl:part name="Body" element="tns:ArrayOfConsFins" />
   </wsdl:message>
+  <wsdl:message name="Consulta_ConvocatoriaHttpPostIn">
+    <wsdl:part name="CodAc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_ConvocatoriaHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfConsConv" />
+  </wsdl:message>
   <wsdl:portType name="KactusSoap">
     <wsdl:operation name="Consulta_Contacto">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de los funcionarios de planta del SENA.</wsdl:documentation>
@@ -530,6 +579,11 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Inscritos a familia.</wsdl:documentation>
       <wsdl:input message="tns:Consulta_FamiliaInscSoapIn" />
       <wsdl:output message="tns:Consulta_FamiliaInscSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Convocatoria">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna la convocatoria familiasena.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_ConvocatoriaSoapIn" />
+      <wsdl:output message="tns:Consulta_ConvocatoriaSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="KactusHttpGet">
@@ -578,6 +632,11 @@
       <wsdl:input message="tns:Consulta_FamiliaInscHttpGetIn" />
       <wsdl:output message="tns:Consulta_FamiliaInscHttpGetOut" />
     </wsdl:operation>
+    <wsdl:operation name="Consulta_Convocatoria">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna la convocatoria familiasena.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_ConvocatoriaHttpGetIn" />
+      <wsdl:output message="tns:Consulta_ConvocatoriaHttpGetOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="KactusHttpPost">
     <wsdl:operation name="Consulta_Contacto">
@@ -624,6 +683,11 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el listado de Inscritos a familia.</wsdl:documentation>
       <wsdl:input message="tns:Consulta_FamiliaInscHttpPostIn" />
       <wsdl:output message="tns:Consulta_FamiliaInscHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Convocatoria">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna la convocatoria familiasena.</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_ConvocatoriaHttpPostIn" />
+      <wsdl:output message="tns:Consulta_ConvocatoriaHttpPostOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="KactusSoap" type="tns:KactusSoap">
@@ -702,6 +766,15 @@
     </wsdl:operation>
     <wsdl:operation name="Consulta_FamiliaInsc">
       <soap:operation soapAction="http://10.104.180.11/Consulta_FamiliaInsc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Convocatoria">
+      <soap:operation soapAction="http://10.104.180.11/Consulta_Convocatoria" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -793,6 +866,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Consulta_Convocatoria">
+      <soap12:operation soapAction="http://10.104.180.11/Consulta_Convocatoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="KactusHttpGet" type="tns:KactusHttpGet">
     <http:binding verb="GET" />
@@ -877,6 +959,15 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Consulta_Convocatoria">
+      <http:operation location="/Consulta_Convocatoria" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="KactusHttpPost" type="tns:KactusHttpPost">
     <http:binding verb="POST" />
@@ -954,6 +1045,15 @@
     </wsdl:operation>
     <wsdl:operation name="Consulta_FamiliaInsc">
       <http:operation location="/Consulta_FamiliaInsc" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Convocatoria">
+      <http:operation location="/Consulta_Convocatoria" />
       <wsdl:input>
         <mime:content type="application/x-www-form-urlencoded" />
       </wsdl:input>
