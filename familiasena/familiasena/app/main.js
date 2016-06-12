@@ -2,7 +2,7 @@
     document.getElementById("enviarInfo").addEventListener("click",
             function () {
                 var convo = $("#SelcConv").val();
-                if (convo != "false") {
+                if (convo != "false" || convo == "") {
                     if (confirm("Señor Usuario recuerde que solo se pueden registrar 2 familiares por convocatoria una ves registrados no podran ser modificados y solo seran tomados los dos primeros familiares inscritos en la convocatoria correpondiente")) {
                         var count = $("#count").attr("value");
 
@@ -42,14 +42,20 @@
                                     }
                                 });
                             }
-                            else { noCont++; if (noCont > count) { alert("No ha seleccionado ningun Hijo"); } }
+                            else { noCont++; if (noCont > count) { alert("No ha seleccionado ningun familiar"); } }
                             cont++;
+                        }
+                        if (cont > count) {
+
+                            console.log('Sale');
+                            document.location="login.aspx/Logout";
+
                         }
                         //alert($("#count").val());
                     }
-                }
+                    }
                 else {
-                    alert("No a seleccionado la convocatoria");
+                    alert("No a seleccionado la convocatoria o en este momento no hay convocatorias activas");
                     document.getElementById("SelcConv").focus();
                 }
             }

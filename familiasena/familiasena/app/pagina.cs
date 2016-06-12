@@ -20,15 +20,16 @@ public partial class pagina : System.Web.UI.Page
             }
         }
 
+    
 
-        public void Logout(object sender, EventArgs e) {
+    public void Logout(object sender, EventArgs e) {
                 Session.Abandon();
                 Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
                 Response.Redirect("login.aspx");
             }
 
+  
 
-    
     //control de cantidad de familiares
 
 
@@ -51,7 +52,9 @@ public partial class pagina : System.Web.UI.Page
         familiares.InnerHtml = "";
         convocatoria.InnerHtml = "<h4>Convocatoria</h4><select id='SelcConv'><option value='false'>Seleccione la convocatoria...</option>";
 
-        foreach (var opt in cnv) { convocatoria.InnerHtml += "<option value='" + opt.ID + "'>" + opt.NOTA + "</option>"; }
+        foreach (var opt in cnv) {
+                if (opt.Nro_Registros != "0") { convocatoria.InnerHtml += "<option value='" + opt.ID + "'>" + opt.NOTA + "</option>"; }
+            }
 
         convocatoria.InnerHtml += "</select>";
         int i = 0;
