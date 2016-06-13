@@ -42,13 +42,17 @@
                                     }
                                 });
                             }
-                            else { noCont++; if (noCont > count) { alert("No ha seleccionado ningun familiar"); } }
+                            else {
+                                noCont++; if (noCont > count) { alert("No ha seleccionado ningun familiar"); }
+
+                            }
                             cont++;
+                            
                         }
-                        if (cont > count) {
+                        if (cont > count && noCont < cont) {
 
                             console.log('Sale');
-                            document.location="login.aspx/Logout";
+                            document.location = "Logout.aspx";
 
                         }
                         //alert($("#count").val());

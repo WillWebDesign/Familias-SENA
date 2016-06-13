@@ -64,8 +64,7 @@
     width:48.2em;
     margin-left:auto;
     margin-right:auto;
-    height:9.4em;
-   
+    height:10.4em;
    
 }
 
@@ -210,13 +209,13 @@
     border: 2px solid #999999; 
     border-radius: 0px;
 }
-.onoffswitch-inner {
+.onoffswitch-inner,.onoffswitch-inner-inactive {
     display: block; 
     width: 200%; 
     margin-left: -100%;
     transition: margin 0.3s ease-in 0s;
 }
-.onoffswitch-inner:before, .onoffswitch-inner:after {
+.onoffswitch-inner:before, .onoffswitch-inner:after,.onoffswitch-inner-inactive:after,.onoffswitch-inner-inactive:before {
     display: block; 
     float: left; 
     width: 50%; 
@@ -237,12 +236,26 @@
     padding-left: 20px;
     background-color: #7FDB8B; color: #FFFFFF;
 }
+.onoffswitch-inner-inactive:before {
+    content: "SI";
+    padding-top:3px;
+    padding-left: 20px;
+    background-color: #7FDB8B; color: #FFFFFF;
+}
 .onoffswitch-inner:after {
     content: "NO";
-    
     padding-top:3px;
     padding-right: 20px;
-    background-color: #E33030; color: #333333;
+    background-color: #E33030; 
+    color: #333333;
+    text-align: right;
+}
+.onoffswitch-inner-inactive:after {
+    content: "NO";
+    padding-top: 3px;
+    padding-right: 20px;
+    background-color: #979494;
+    color: #747070;
     text-align: right;
 }
 .onoffswitch-switch {

@@ -193,6 +193,7 @@
     <Content Include="app\ajax.aspx" />
     <Content Include="app\estilos.css" />
     <Content Include="app\login.aspx" />
+    <Content Include="app\Logout.aspx" />
     <Content Include="app\main.js" />
     <Content Include="app\pagina.aspx" />
     <Content Include="Contact.aspx" />
@@ -351,6 +352,13 @@
     </Compile>
     <Compile Include="app\login.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\pagina.aspx.cs">
       <DependentUpon>pagina.aspx</DependentUpon>

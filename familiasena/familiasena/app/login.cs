@@ -17,13 +17,6 @@ public partial class login : System.Web.UI.Page
         }
     }
 
-    public void Logout()
-    {
-        Session.Abandon();
-        Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
-        Response.Redirect("login.aspx");
-    }
-
     protected void enviar_Click(object sender, EventArgs e)
     {
         
