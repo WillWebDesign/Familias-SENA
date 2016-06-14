@@ -64,8 +64,9 @@
      <div id="familiares" runat="server">
          
      </div> <br/>
-    
-   <input type="button" id="enviarInfo" value="Confirmar"/>
+    <center>
+   <input type="button" id="enviarInfo"    value="Confirmar"/>
+    </center>
 </div>  
 
          <div id="pie">
