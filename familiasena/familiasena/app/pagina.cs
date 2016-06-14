@@ -70,11 +70,9 @@ public partial class pagina : System.Web.UI.Page
             familiares.InnerHtml += "<div  style='margin-left:2em; width: 370px; padding-top:2em;'>Cedula:" + item.COD_FAMI + "</div>";
             familiares.InnerHtml += "<div  style='margin-left:2em; width: 370px;'>Apellidos:" + item.APE_FAMI + "</div>";
             familiares.InnerHtml += "<div  style='margin-left:2em; width: 370px;'>Nombres:" + item.NOM_FAMI + "</div>";
-            familiares.InnerHtml += "<div  id='relacion"+i+"' style='margin-left:2em; width: 370px;'>Relacion:" + item.TIP_RELA + "</div>";
+            familiares.InnerHtml += "<div  id='relacion"+i+"' style='margin-left:2em; width: 370px;'>Viabilidad:" + item.TIP_RELA + "</div>";
             familiares.InnerHtml += "<div  style='margin-left:2em; width: 370px;'>Edad:" + item.EDAD + "</div>";
             familiares.InnerHtml += "<div  style='margin-left:2em; width: 370px;'>Fecha De Nacimiento:" + item.NACIO + "</div>";
-            familiares.InnerHtml += "<div  style='margin-left:2em; width: 370px;'>Regional:" + item.REGIONAL + "</div>";
-            familiares.InnerHtml += "<div  style='margin-left:2em; width: 800px;'>Centro:" + item.CENTRO + "</div><br /><br /><br />";
             familiares.InnerHtml += "<div   class='seleccionar'>Seleccionar Familliar" + "</div><br />"; 
             familiares.InnerHtml += "<div  style='margin:0 auto;' class='onoffswitch' value='"+i+ "'><input type='hidden' id='rela" + i +"' value='" + item.TIP_RELA + "'><input type='hidden' id='docFun" + i + "' value='" + item.COD_EMPL + "'><input type='hidden' id='docFam" + i + "' value='" + item.COD_FAMI + "'><input type = 'checkbox' value='" + i + "' name = 'onoffswitch' class='onoffswitch-checkbox' id='myonoffswitch" + i+ "'><label class='onoffswitch-label' value='" + i + "' for='myonoffswitch" + i + "'><span class='onoffswitch-inner'></span><span class='onoffswitch-switch'></span></label></div>";
            
