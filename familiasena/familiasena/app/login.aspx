@@ -13,24 +13,25 @@
     
  <body>
      
-<div id="contenedor">
-     
-    <div id="cabeza">
+<div id="contenedor"> 
+    <div id="cabeza"">
+
+
         <div Id ="sena">
-            <img alt="" src="../imagen/logosena.png" style="height: 82px; width: 102px; margin-left:2em; margin-top:17px;" />
+            <img alt="" src="../imagen/logosena.png" style="height: 103px; width: 127px; margin-left:1em; margin-top:10px;" />
         </div>
            
-    <div class="familia" style="float:left; width: 875px; height: 88px;" ><h1 align="center" style="height: 41px; width: 496px; margin-left: auto; margin-right:auto; margin-top:1em;">Familia Sena</h1></div>  
+    <div class="familia" style="float:left; width: 884px; height: 88px;" ><h1 align="center" style="height: 41px; width: 496px; margin-left: auto; margin-right:auto; margin-top:1em;">Familia Sena</h1></div>  
 
-    <div id="enlaces" style="float:right;  height: 101px; width: 201px; margin-right:5px; margin-left: 0px;">
+    <div id="enlaces" style="float:right;  height: 121px; width: 201px; margin-right:5px; margin-left: 0px;">
              
-   <table style="height: 40px; float:right; width: 140px;">
+   <table style="height: 40px; float:right; width: 190px;">
         <tr>
-            <td> <img alt="" src="../imagen/logo.png" style="height: 63px; width: 175px; float:; margin-top: 0px;" /></td>
+            <td> <a href="http://es.presidencia.gov.co/"><img alt="" src="../imagen/logo.png" style="height: 63px; width: 175px; float:; margin-top: 0px;" /></a></td>
         </tr>  
   </table>
 
-  <table style="height: 7px; float:right; width: 140px;  margin-bottom:3em;">
+  <table style="height: 43px; float:right; width: 139px;  margin-bottom:3em;">
              
        <tr>
          <td> <a href="https://www.facebook.com/senageneral/"><img  alt="" src="../imagen/facebook.png" style="height: 26px; width: 26px" /></a></td>
@@ -44,20 +45,29 @@
    </div>      
            
 <div id="login">
+    <div  id="grup">
+     <div id="grupo">
+    <fieldset id="gru">
+    <legend style="font-style: oblique;">Inicio de Sesión:</legend>
       <form id = "form1" runat="server">     
         <label> Usuario</label><br />
-        <img alt="" src="../imagen/usuario.png" style="margin-right: 0px; margin-left: 0px; width: 17px; height: 19px; margin-top: 2px;" /><asp:TextBox ID = "txtLogin" Width="157px" runat="server" style="margin-left: 2px" Height="25px"></asp:TextBox><br />
+        <img alt="" src="../imagen/usuario.png" style="margin-right: 0px; margin-left: 110px; width: 17px; height: 17px; " /><asp:TextBox ID = "txtLogin" Width="10em"   runat="server" style="margin-left: 0px" Height="20px"></asp:TextBox>@sena.edu.co<br />
         <label>Contraseña</label><br />
-           <img alt="" src="../imagen/contrasena.png" style="margin-right: 0px;  width: 17px; height: 17px;" /><asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Width="157px" style="margin-left: 2px" Height="25px"></asp:TextBox>
+           <img alt="" src="../imagen/contrasena.png" style="margin-right: 0px;  width: 17px; height: 17px;" /><asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Width="10em" style="margin-left: 2px" Height="20px"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID = "Button1" runat="server" Text="Iniciar Sesion"  OnClick="enviar_Click" Width="198px" style="margin-left: 10px" /><br /><br />
+        <asp:Button ID = "Button1" runat="server" Text="Iniciar Sesion"  OnClick="enviar_Click" Width="198px" style="margin-left: 10px" />
+          <br />
+
         <asp:Label ID = "lblError" runat="server" ForeColor="Red" Text=""></asp:Label><br />
      </form>
+        </fieldset>
+        </div>
+        </div>
 </div>
    
 <div id="pie">
-    <table style="height: 238px; width: 846px; margin-left:auto; margin-right:auto; font-family:Constantia;color:#ffffff; font-size:12px;">
+    <table style="height: 238px; width: 846px; margin-left:auto; margin-right:auto; font-family:Calibri;color:#ffffff; font-size:12px;">
         <tr>
            <td >Servicio Nacional de Aprendizaje SENA – Dirección General
            Calle 57 No. 8 - 69 Bogotá D.C., Cundinamarca, Colombia

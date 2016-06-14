@@ -9,7 +9,7 @@
 
 #cabeza{
     background-color:#efebeb;
-    height: 7em;
+    height: 8em;
     border: 1px solid #ffffff;
     margin-top: 5px;
     width:80em;
@@ -17,13 +17,14 @@
     margin-left:auto;
     border-radius:1em;
     margin-top:2em;
+    margin-bottom:3em;
 }
 
 #sena{
     float:left;
     width:186px;
     height:auto;
-    height: 108px;
+    height: 119px;
    
 }
 .ima{
@@ -36,15 +37,12 @@
 
 #login{
     background-color:#efebeb;
-    border-radius:1em;
     text-align:center;
-    margin-top:3em;
-    margin-bottom:3em;
     margin-left:auto;
     margin-right:auto;
     padding-top:2em;
-    width:50em;
-    height:15em;
+    width:auto;
+    height:18em;
    
 }
 
@@ -89,33 +87,62 @@
     height:auto;
     padding-bottom: 1em;
 }
+#gru{
+
+    border-bottom-color: white;
+    border-left-color: white;
+    border-right-color: white;
+    border-top-color: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 20px;
+    height:1em;
+}
+#grup{
+    border-radius:1em;
+    background-color:white; 
+    padding-top:1em;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    width:80em;
+    height:15em;
+
+}
+#grupo{
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    width:30em;
+}
+
 #Button1 {
-  background: #6dd1de;
-  background-image: -webkit-linear-gradient(top, #6dd1de, #94a3a2);
-  background-image: -moz-linear-gradient(top, #6dd1de, #94a3a2);
-  background-image: -ms-linear-gradient(top, #6dd1de, #94a3a2);
-  background-image: -o-linear-gradient(top, #6dd1de, #94a3a2);
-  background-image: linear-gradient(to bottom, #6dd1de, #94a3a2);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
+  background: #555;
+  background-image: -webkit-linear-gradient(top,  #555, #555);
+  background-image: -moz-linear-gradient(top, #555, #555);
+  background-image: -ms-linear-gradient(top, #555, #555);
+  background-image: -o-linear-gradient(top, ##555, #555);
+  background-image: linear-gradient(to bottom, #555, #555);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   text-shadow: 1px 1px 3px #c7a9c7;
   font-family: Georgia;
   color: #ffffff;
   font-size: 14px;
-  padding: 10px 20px 10px 20px;
+  padding: 5px 15px 5px 15px;
   text-decoration: none;
 
 
 }
 
 #enviarInfo{
-    background: #6dd1de;
-  background-image: -webkit-linear-gradient(top, #6dd1de, #94a3a2);
-  background-image: -moz-linear-gradient(top, #6dd1de, #94a3a2);
-  background-image: -ms-linear-gradient(top, #6dd1de, #94a3a2);
-  background-image: -o-linear-gradient(top, #6dd1de, #94a3a2);
-  background-image: linear-gradient(to bottom, #6dd1de, #94a3a2);
+    background: #555;
+  background-image: -webkit-linear-gradient(top, #555, #555);
+  background-image: -moz-linear-gradient(top, #555, #555);
+  background-image: -ms-linear-gradient(top, #555, #555);
+  background-image: -o-linear-gradient(top, #555, #555);
+  background-image: linear-gradient(to bottom, #555, #555);
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
@@ -128,12 +155,12 @@
 
 #cerrar{
     float:right;
- background: #6dd1de;
-  background-image: -webkit-linear-gradient(top, #6dd1de, #94a3a2);
-  background-image: -moz-linear-gradient(top, #6dd1de, #94a3a2);
-  background-image: -ms-linear-gradient(top, #6dd1de, #94a3a2);
-  background-image: -o-linear-gradient(top, #6dd1de, #94a3a2);
-  background-image: linear-gradient(to bottom, #6dd1de, #94a3a2);
+ background: #555;
+  background-image: -webkit-linear-gradient(top, #555, #555);
+  background-image: -moz-linear-gradient(top, #555, #555);
+  background-image: -ms-linear-gradient(top, #555,#555);
+  background-image: -o-linear-gradient(top, #555, #555);
+  background-image: linear-gradient(to bottom, #555, #555);
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;

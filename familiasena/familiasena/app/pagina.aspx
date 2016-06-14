@@ -18,15 +18,38 @@
 <body>
     
     <form id="form1" runat="server">
-    
-<div id="contenedor">
     <asp:Button ID="cerrar" runat="server" OnClick="Logout"  Text="Cerrar  Sesion"/>
-   <div id="cabeza">
+<div id="contenedor">
+    
+   <<div id="cabeza"">
+
+
         <div Id ="sena">
-            <img alt="" src="../imagen/logosena.png" style="height: 82px; width: 102px; margin-left:2em; margin-top:17px;" />
+            <img alt="" src="../imagen/logosena.png" style="height: 103px; width: 127px; margin-left:1em; margin-top:10px;" />
         </div>
-        <div class="familia"><h1 align="center" style="height: 45px; width: 410px; margin-left: auto; margin-right:auto; margin-top:1em;">Familia Sena</h1></div>  
-        </div>   
+           
+    <div class="familia" style="float:left; width: 884px; height: 88px;" ><h1 align="center" style="height: 41px; width: 496px; margin-left: auto; margin-right:auto; margin-top:1em;">Familia Sena</h1></div>  
+
+    <div id="enlaces" style="float:right;  height: 121px; width: 201px; margin-right:5px; margin-left: 0px;">
+             
+   <table style="height: 40px; float:right; width: 190px;">
+        <tr>
+            <td> <a href="http://es.presidencia.gov.co/"><img alt="" src="../imagen/logo.png" style="height: 63px; width: 175px; float:; margin-top: 0px;" /></a></td>
+        </tr>  
+  </table>
+
+  <table style="height: 43px; float:right; width: 139px;  margin-bottom:3em;">
+             
+       <tr>
+         <td> <a href="https://www.facebook.com/senageneral/"><img  alt="" src="../imagen/facebook.png" style="height: 26px; width: 26px" /></a></td>
+         <td><a href="https://www.youtube.com/user/SENATV"><img alt="" src="../imagen/youtube.png" style="height: 26px; width: 26px" /></a></td>
+         <td><a href="https://www.instagram.com/senacomunica/"><img alt="" src="../imagen/instagran.png" style="height: 26px; width: 26px" /></a></td>
+         <td><a href="https://plus.google.com/+senacolombia/posts"><img alt="" src="../imagen/google.png" style="height: 26px; width: 26px" /></a></td>
+         <td><a href="https://twitter.com/SENAComunica"><img alt="" src="../imagen/twitter.png" style="height: 26px; width: 26px" /></a></td>
+       </tr>
+   </table>
+    </div>
+   </div>
  
  <div id="contenidos"> 
          
